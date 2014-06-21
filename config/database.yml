@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  database: bookborrow
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  database: bookborrow
+  username: postgres
+  password: postgres
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: bookborrow
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
