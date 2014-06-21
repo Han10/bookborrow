@@ -15,5 +15,4 @@
 //= require jquery.ui.effect-slide
 //= require skrollr
 //= require turbolinks
-//= require bootstrap-modal
 //= require_tree .
