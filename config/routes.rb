@@ -3,8 +3,9 @@ Bookborrow::Application.routes.draw do
 
   root "static_pages#home"
 
-  get '/search' => "static_pages#search"
   post '/' => "static_pages#create"
+
+  resources :book
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

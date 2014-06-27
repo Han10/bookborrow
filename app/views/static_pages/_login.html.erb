@@ -1,6 +1,6 @@
 <div id="login">
 <div id="title">Login</div>
-<%= form_for @user, url: {controller: "static_pages", action: "search"}, html: {method: "get" } do |f| %>
+<%= form_for @user, url: {controller: "book", action: "index"}, html: {method: "get" } do |f| %>
  
   <% if @user.errors.any? %>
     <div id="error_explanation">

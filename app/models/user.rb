@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+has_many :books
+
  attr_accessible :email, :pass, :password_confirmation, :dof, :first_name, :last_name, :gender
 
 validates :first_name, presence: true

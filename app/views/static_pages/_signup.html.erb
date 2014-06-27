@@ -1,18 +1,6 @@
 <div id="title">Sign Up</div>
 <div>
 <%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
- 
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
 	<table>
 	<tr>
@@ -37,7 +25,7 @@
 	    	<%= f.label :email, "Email" %>
 	    </td>
 	    <td>
-	    	<%= f.email_field :email, autofocus: true, placeholder: "Your Email Address" %>
+	    	<%= f.email_field :email, placeholder: "Your Email Address" %>
 	    </td>
 	</tr>
 	<tr>
@@ -66,6 +54,17 @@
 	    </td>
 	</tr>
 </table>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <div id="createbutton">
 <%= f.submit "Create an Account"%>
 </div>

@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
 
+skip_before_filter  :verify_authenticity_token
+
 def home
 
 	@user = User.new
@@ -14,9 +16,6 @@ def create
 		redirect_to search_path
 	end
 	
-end
-
-def search 
 end
 
 private
