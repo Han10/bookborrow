@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.effect-slide
+//= require jquery.ui.effect.all
 //= require skrollr
 //= require turbolinks
 //= require_tree .

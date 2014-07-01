@@ -1,5 +1,4 @@
 <div id="login">
-<div id="title">Login</div>
 <%= form_for @user, url: {controller: "book", action: "index"}, html: {method: "get" } do |f| %>
  
   <% if @user.errors.any? %>
@@ -26,7 +25,7 @@
 </tr>
 </table>
 <div id="createbutton">
-<%= f.submit "ENTER" %>
+<%= f.submit "Login" %>
 </div>
 <% end %>
 

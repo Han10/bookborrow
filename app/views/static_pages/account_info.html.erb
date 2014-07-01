@@ -1,6 +1,11 @@
-<div id="title">Sign Up</div>
-<div>
-<%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
+<div class="book_container">
+	<div class="inner_book_container">
+
+	<div id="account_title">
+		Account Information
+	</div>
+
+	<%= form_for @user, url: {controller: "static_pages", action: "update"} do |f| %>
 
 	<table>
 	<tr>
@@ -8,7 +13,7 @@
 	    	<%= f.label :first_name, "First Name" %>
 	    </td>
 	    <td>
-	    	<%= f.text_field :first_name, placeholder: "First Name" %>
+	    	<%= f.text_field :first_name %>
 	    </td>
 	</tr>
 	<tr>
@@ -16,7 +21,7 @@
 	   		<%= f.label :last_name, "Last Name" %>
 	    </td>
 	    <td>
-			<%= f.text_field :last_name, placeholder: "Last Name" %>
+			<%= f.text_field :last_name %>
 		</td>
 	  </div>
 	</tr>
@@ -25,7 +30,7 @@
 	    	<%= f.label :email, "Email" %>
 	    </td>
 	    <td>
-	    	<%= f.email_field :email, placeholder: "Your Email Address" %>
+	    	<%= f.email_field :email %>
 	    </td>
 	</tr>
 	<tr>
@@ -54,23 +59,9 @@
 	    </td>
 	</tr>
 </table>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<div id="createbutton">
-<%= f.submit "Create Account"%>
+<div id="updatebutton">
+<%= f.submit "Edit"%>
 </div>
 <% end %>
-</div>
-
-<div id="cancelbutton">
-	Cancel
+	</div>
 </div>

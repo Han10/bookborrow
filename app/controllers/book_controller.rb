@@ -3,6 +3,16 @@ class BookController < ApplicationController
   def index
   	@books = Book.all
 
+    if session[:current_user_email] == nil
+      
+      session[:current_user_email] = params[:user][:email]
+   
+    else
+      #nothing
+    end
+
+    @user = User.find_by email: session[:current_user_email]
+
   end
 
   def show
@@ -25,7 +35,7 @@ class BookController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @book = Book.all
   end
 
   def update
@@ -50,3 +60,4 @@ class BookController < ApplicationController
       params.require(:book).permit(:title, :description, :thumbnail, :email)
     end
 end
+

@@ -4,8 +4,10 @@ Bookborrow::Application.routes.draw do
   root "static_pages#home"
 
   post '/' => "static_pages#create"
-
+  get '/account/:id' => "static_pages#account_info", as: "account"
+  patch '/account/:id' => "static_pages#update"
   resources :book
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
