@@ -77,4 +77,16 @@ Bookborrow::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+    #AWS ACCESS KEY SETUP
+  config.paperclip_defaults = {
+    :storage => 's3',
+    :region => 'us-west-2',
+    :bucket => ENV['AWS_BUCKET_NAME'],
+    :s3_credentials => {
+    :access_key_id => ENV['AWS_ACCESS_KEY'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+  
 end

@@ -1,5 +1,5 @@
 <div id="title">Sign Up</div>
-<div>
+<div style="padding-bottom: 5%;">
 <%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
 
 	<table>
@@ -69,8 +69,4 @@
 <%= f.submit "Create Account"%>
 </div>
 <% end %>
-</div>
-
-<div id="cancelbutton">
-	Cancel
 </div>

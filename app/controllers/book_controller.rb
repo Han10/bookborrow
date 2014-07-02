@@ -25,8 +25,11 @@ class BookController < ApplicationController
   end
 
   def create
-    @book = Book.new(book_params)
+    user = User.find_by email: session[:current_user_email]
 
+    @book = Book.new(book_params)
+    @book.email = user.email
+    
     if @book.save
       redirect_to @book
     else

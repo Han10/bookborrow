@@ -1,20 +1,18 @@
 $(document).ready(function () {
 
-$('body').css({ 'height' : $(window).height() });
-$('body').css({ 'max-height' : 'none' });
-$('body').css({ 'width' : $(window).width() });
-$('body').css({ 'max-width' : 'none' });
+$('div#container').css({ 'height' : $(document).height() });
+$('div#container').css({ 'width' : $(document).width() });
+
 
 $("#signup_container").hide();
-
 $("#dropdown").hide();
-
+$("div#cancelbutton").hide();
 
 $("#signupbutton").click( function(){
 	$("#login_container").hide();
 	$("#signupbutton").hide();
 	$('#signup_container').fadeTo(200, 1);
-
+	$('#cancelbutton').fadeTo(200, 1);
 });
 
 $("#topdropdown").click(function(){
@@ -27,12 +25,9 @@ $("#topdropdown").click(function(){
 });
 
 
-
-
-
-
 $("#cancelbutton").click( function(){
 	$("#signup_container").hide();
+	$("#cancelbutton").hide();
 	$('#login_container').fadeTo(200, 1);
 	$('#signupbutton').fadeTo(200, 1);
 });

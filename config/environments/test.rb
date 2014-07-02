@@ -33,4 +33,16 @@ Bookborrow::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+    #AWS ACCESS KEY SETUP
+  config.paperclip_defaults = {
+    :storage => 's3',
+    :region => 'us-west-2',
+    :bucket => ENV['AWS_BUCKET_NAME'],
+    :s3_credentials => {
+    :access_key_id => ENV['AWS_ACCESS_KEY'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+  
 end

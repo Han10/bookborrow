@@ -15,4 +15,30 @@ def s3_credentials
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] }
 end
 
+validates_attachment :thumbnail,
+  :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
+
+def desc book
+
+	desc = book.description
+
+	if desc.length > 140 
+
+		desc_min = desc[ 0.. desc.index('.')]
+
+		if desc_min.length < 140
+
+			desc_min = desc[0 .. desc.index(/\./, desc.index('.')+1) ]
+
+		end
+	else
+
+		desc_min = desc
+
+	end 
+	
+	return desc_min
+
+end
+
 end
