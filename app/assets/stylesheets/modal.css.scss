@@ -35,7 +35,7 @@ div#outter_modal {
 	bottom: 0;
 }
 
-div#modal_header {
+div#modal_header_container {
 	height: 10%;
 	width: 100%;
 	border-bottom: 2px solid #ddd;
@@ -45,9 +45,45 @@ span#close {
 	float: right;
 	padding: 1% 2%;
 	font-family: sans-serif;
-	background-color: #d9534f;
-
+	color: #777;
 	&:hover{
 		cursor: pointer;
 	}
+}
+
+div#modal_header {
+	float: left;
+	height: 100%;
+	width: auto;
+	vertical-align: middle;
+	font-family: Georgia, serif;
+	color: #555;
+	display: inline-block;
+	text-align: center;
+	padding-left: 2%;
+
+}
+
+em {
+	color:#5cb85c;
+}
+
+div#modal_body_container {
+	letter-spacing: 1px;
+	font-size: 1em;
+	line-height: 80%;
+	color: #333;
+	font-family: Georgia, serif;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 3%;
+}
+
+strong {
+	letter-spacing: normal;
+}
+
+input, textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
 }

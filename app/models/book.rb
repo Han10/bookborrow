@@ -18,26 +18,33 @@ end
 validates_attachment :thumbnail,
   :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
 
-def desc book
+def desc 
 
-	desc = book.description
-
-	if desc.length > 140 
-
-		desc_min = desc[ 0.. desc.index('.')]
-
+	if self.description.length > 140 
+		desc_min = self.description[ 0.. self.description.index('.')]
 		if desc_min.length < 140
-
-			desc_min = desc[0 .. desc.index(/\./, desc.index('.')+1) ]
-
+			desc_min = self.description[0 .. self.description.index(/\./, self.description.index('.')+1) ]
 		end
 	else
-
-		desc_min = desc
-
+		desc_min = self.description
 	end 
 	
 	return desc_min
+
+end
+
+def title_min
+	return title[0...self.title.index(/[^A-Za-z0-9 ]/, 0 )]
+end
+
+def last_name
+	user = User.all
+	
+	user.each do | user |
+		if user.email.eql? self.email
+			return user.last_name
+		end
+	end
 
 end
 

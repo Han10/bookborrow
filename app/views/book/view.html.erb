@@ -26,7 +26,8 @@
 
 		<%= link_to "Back", book_index_path, id: "back_button" %>
 
-		<div id="request_button"> Request </div>
+		<div id="request_button" data-book-title="<%= @book.title_min %>" 
+		data-book-email="<%= @book.email %>" data-last-name="<%= @book.last_name %>"> Request </div>
 
 		</div>
 	</div>

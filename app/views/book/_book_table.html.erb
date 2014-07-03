@@ -10,10 +10,11 @@
 				<%= book.title %>
 			</div>
 			<div id="book_desc">
-			    <%= book.desc book %>
+			    <%= book.desc %>
 			</div>
 			<%= link_to "View", view_path(book), id: "viewbutton" %>
-			<span id="requestbutton" data-book-id="<%= book.id %>"> Request </span>
+			<span id="requestbutton" data-book-title="<%= book.title_min %>" 
+			data-book-email="<%= book.email %>" data-last-name="<%= book.last_name %>"> Request </span>
 		</div>
 	</div>
 	<% end %>
