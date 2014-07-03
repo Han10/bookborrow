@@ -26,14 +26,17 @@ class BookController < ApplicationController
   end
 
   def requestmodal
-    @book = Book.find(params[:id])
-    @user = User.find_by email: session[:current_user_email]
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @success } 
+    if request.post?
+      @success = true;
+
+      message = params['message']
+      
+      respond_to do |format|
+        format.html
+        format.json { render json: @success } 
+      end
     end
-
   end 
 
   def new

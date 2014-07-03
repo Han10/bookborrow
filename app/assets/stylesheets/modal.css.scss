@@ -57,7 +57,7 @@ div#modal_header {
 	width: auto;
 	vertical-align: middle;
 	font-family: Georgia, serif;
-	color: #555;
+	color: #888;
 	display: inline-block;
 	text-align: center;
 	padding-left: 2%;
@@ -72,7 +72,7 @@ div#modal_body_container {
 	letter-spacing: 1px;
 	font-size: 1em;
 	line-height: 80%;
-	color: #333;
+	color: #666;
 	font-family: Georgia, serif;
 	margin-top: 10%;
 	margin-bottom: 10%;
@@ -84,6 +84,59 @@ strong {
 }
 
 input, textarea {
-	-webkit-appearance: none;
-	border-radius: 0;
+}
+
+div#modal_message_container {
+	margin-left: 3%;
+	color: #666;
+	font-family: Georgia, serif;
+	font-weight: bold;
+}
+
+textarea#modal_message{
+margin-top: 2%;
+border-radius: 2%;
+width: 92%;
+padding: 2%;
+resize: none;
+font-family: helvetica, verdana, tahoma;
+color:#333;
+}
+
+div#modal_send_button {
+	display: inline-block;
+	padding: 5% 1%;
+	background-color: #5cb85c;
+	color: #333;
+	font-size: 1.1em;
+	border-radius: 3px;
+	text-align: center;
+	color:#fff;
+}
+
+div#modal_send_button:hover{
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+div#modal_cancel_button {
+	width: 45%;
+	border: 1px solid #555;
+	display: inline-block;
+	padding: 5% 1%;
+	color: #333;
+	font-size: 1.1em;
+	border-radius: 3px;
+	text-align: center;
+}
+
+div#modal_cancel_button:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+div#send_cancel_container {
+	width: 55%;
+	margin: 10% auto;
+	height: 12%;
 }

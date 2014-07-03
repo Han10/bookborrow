@@ -5,19 +5,18 @@
 			<span id="close">&times;</span>
 		</div>
 
-		<div id="modal_body_container">
-		</div>
-		<div id="modal_message_container"></div>
-			<div class="field">
-			  <%= label_tag :modal_message, "Send a message:" %><br>
-			  <%= text_area_tag :modal_message %>
+		<div id="modal_body_container"></div>
+		<div id="modal_message_container">
+			<div>
+			  <%= label_tag :modal_message, "Message:" %><br>
+			  <%= text_area_tag :modal_message, "", placeholder: "Send a message", rows: "7" %>
 			</div>
 
-			<div class="field">
-			  <%= link_to "Submit", "#" %>
-			</div>
+			
 			
 		</div>
-
-	</div>
+		<div id="send_cancel_container">
+			<div id="modal_send_button">Send</div>
+			<div id="modal_cancel_button">Cancel</div>	
+		</div>
 </div>

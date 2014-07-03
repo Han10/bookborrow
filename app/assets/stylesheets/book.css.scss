@@ -1,10 +1,10 @@
 .book_container {
-	background-image: url("green-2.png");
+	background-image: image-url("green-2.png");
   	background-repeat: repeat;
 }
 
 .small_book_container {
-	background-image: url("green-2.png");
+	background-image: image-url("green-2.png");
   	background-repeat: repeat;
 }
 
@@ -133,9 +133,7 @@ div#bookcontainer {
 	width: 96%;
 	height: 15%;
 	background-color: #eee;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	margin-top: -1px;
+	border-top: 2px solid #fff;
 }
 
 div#book_photo {
