@@ -24,6 +24,16 @@ $("#topdropdown").click(function(){
 		}
 });
 
+$(document).mouseup(function (e)
+{
+    var container = $("#account_dropdown");
+
+    if (!container.is(e.target)
+        && container.has(e.target).length === 0) 
+    {
+        $("#dropdown").hide();
+    }
+});
 
 $("#cancelbutton").click( function(){
 	$("#signup_container").hide();
@@ -32,6 +42,9 @@ $("#cancelbutton").click( function(){
 	$('#signupbutton').fadeTo(200, 1);
 });
 
-
+$('a.next_page').html("Next") ;
+$('span.previous_page.disabled').html("Previous");
+$('a.previous_page').html("Previous") ;
+$('span.next_page.disabled').html("Next");
 
 });

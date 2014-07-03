@@ -15,6 +15,7 @@ gem 'sprockets', '2.11.0'
 gem 'slim', '2.0.0'
 gem 'redcarpet', "~> 3.1.1"
 gem 'paperclip', '3.5.3'
+gem 'will_paginate', '~> 3.0'
 gem 'paperclip-aws'
 gem 'aws-sdk'
 gem 'simple_form'

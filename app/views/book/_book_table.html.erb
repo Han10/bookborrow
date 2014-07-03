@@ -10,11 +10,13 @@
 				<%= book.title %>
 			</div>
 			<div id="book_desc">
-				<%= book.desc book %>
+			    <%= book.desc book %>
 			</div>
-			<span id="viewbutton"> View</span>
-			<span id="requestbutton"> Request</span>
+			<%= link_to "View", view_path(book), id: "viewbutton" %>
+			<span id="requestbutton" data-book-id="<%= book.id %>"> Request </span>
 		</div>
 	</div>
 	<% end %>
+
+	<%= will_paginate @books, :page_links => false %>
 </div>

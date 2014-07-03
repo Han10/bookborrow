@@ -1,0 +1,53 @@
+
+#request_button {
+	float: right;
+	text-decoration: none;
+	padding : 1.5% 2%;
+	background-color:  #5cb85c;
+	border-radius: 3px;
+	color: #fff;
+	margin-right: 1%;
+}
+
+#request_button:hover {
+opacity: 0.9;
+cursor: pointer;
+}
+
+div#modal {
+	height: 60%;
+	width: 25%;
+	left: 50%;
+	margin-left: -12.5%;
+	position: fixed;
+	top: 20%;
+	background-color: #fff;
+	border-radius: 2%;
+	opacity: 1;
+}
+
+div#outter_modal {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+div#modal_header {
+	height: 10%;
+	width: 100%;
+	border-bottom: 2px solid #ddd;
+}
+
+span#close {
+	float: right;
+	padding: 1% 2%;
+	font-family: sans-serif;
+	background-color: #d9534f;
+
+	&:hover{
+		cursor: pointer;
+	}
+}

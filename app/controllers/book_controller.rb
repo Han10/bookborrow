@@ -1,7 +1,7 @@
 class BookController < ApplicationController
 
   def index
-  	@books = Book.all
+  	@books = Book.paginate(:page => params[:page], :per_page => 5)
 
     if session[:current_user_email] == nil
       
@@ -17,8 +17,24 @@ class BookController < ApplicationController
 
   def show
   	@book = Book.find(params[:id])
-    
+    @user = User.find_by email: session[:current_user_email]
   end
+
+  def view
+    @book = Book.find(params[:id])
+    @user = User.find_by email: session[:current_user_email]
+  end
+
+  def requestmodal
+    @book = Book.find(params[:id])
+    @user = User.find_by email: session[:current_user_email]
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @success } 
+    end
+
+  end 
 
   def new
     @book = Book.new

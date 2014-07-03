@@ -1,12 +1,11 @@
 .book_container {
 	background-image: url("green-2.png");
   	background-repeat: repeat;
-  	background-color: black;
 }
 
-.logo {
-	width: 10%;
-	float:left;
+.small_book_container {
+	background-image: url("green-2.png");
+  	background-repeat: repeat;
 }
 
 .inner_book_container {
@@ -14,6 +13,13 @@ width: 70%;
 margin: 0 auto;
 height: 100%;
 background-color: #fff;
+
+}
+
+
+#header_container {
+	width: 100%;
+	height: 6.5%;
 }
 
 div#body_container {
@@ -33,20 +39,23 @@ input.submit_button {
 	padding: 1% 1%;
 	border: 0px;
 	margin: 0px;
+	color: #333;
 	margin-left: -1%;
 	border: 1px solid #aaa;
+	font-size: 1.2em;
+	&:hover{
+		cursor: pointer;
+	}
 }
 
 input#search {
 	width: 85%;
-	padding: 1% 1%;
+	padding: 1% 2%;
 	border-radius: 2px;
 	border: 1px solid #aaa;
-}
-
-#header_container {
-	width: 100%;
-	height: 8%;
+	font-size: 1.2em;
+	color: #555;
+	-webkit-appearance: none;
 }
 
 #account_dropdown {
@@ -88,6 +97,7 @@ div#postbutton{
 	display: inline-block;
 	margin-top: 1.5%;
 	left: 86%;
+	font-size: 1.1em;
 	text-align: center;
 	width: 5%;
 	padding: 1% 3%;
@@ -101,9 +111,9 @@ div#postbutton{
 	}
 }
 
-div#postbutton:hover a {
+div#postbutton:hover{
 	cursor: pointer;
-	opacity: 0.7;
+	opacity: 0.9;
 }
 
 input#book_thumbnail {
@@ -115,13 +125,13 @@ div#book_table_container {
 	top: 1.5%;
 	height: 97%;
 	width: 100%;
-	background-color: #eee;
+	background-color: #fff;
 }
 
 div#bookcontainer {
 	padding: 2%;
 	width: 96%;
-	height: 16%;
+	height: 15%;
 	background-color: #eee;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
@@ -167,20 +177,101 @@ table#book_table {
 	width: 100%;
 }
 
-span#viewbutton {
+a#viewbutton {
 	color: #fff;
+	font-size: 1.1em;
 	padding: 1% 2%;
 	background-color: #428bca;
 	border-radius: 2px;
 	position: relative;
-	left: 83%;
+	left: 82%;
+	text-decoration: none;
+}
+
+a#viewbutton:hover{
+	opacity: 0.9;
 }
 
 span#requestbutton {
 	color: #fff;
+	font-size: 1.1em;
 	padding: 1% 2%;
 	background-color: #5cb85c;
 	border-radius: 2px;
 	position: relative;
-	left: 83%;
+	left: 82%;
+}
+
+span#requestbutton:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+div#book_info_show {
+	float: right;
+	width: 66%;
+	height: 100%;
+}
+
+div#book_title_show {
+	font-size: 2em;
+	color: #444;
+	width: 100%;
+	height: 30%;
+	display: inline-block;
+}
+
+div#book_desc_show {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #555;
+	line-height: 1.5;
+	font-size: 1.1em;
+	display: inline-block;
+	width: 100%;
+	height: 58%;
+}
+
+div#book_photo_show {
+	float: left;
+	width: 30%;
+	display: inline-block;
+}
+
+div#book_photo_show img {
+	max-width: 100%;
+}
+
+div#bookcontainer_show {
+	width: 95%;
+	margin: 0 auto;
+	height: 60%;
+	padding: 10% 0;
+}
+
+a#add_book_button {
+	float: right;
+	text-decoration: none;
+	padding : 1.5% 2%;
+	background-color:  #428bca;
+	border-radius: 3px;
+	color: #fff;
+	margin-right: 1%;
+}
+
+a#add_book_button:hover {
+opacity: 0.9;
+}
+
+a#back_button {
+	float: right;
+	text-decoration: none;
+	padding : 1.5% 2%;
+	border: 1px solid #333;
+	border-radius: 3px;
+	color: #333;
+	margin-right: 2%;
+}
+
+a#back_button:hover {
+	background-color: #ddd;
 }

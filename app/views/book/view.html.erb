@@ -10,7 +10,10 @@
 			<div id="book_title_show">
 				<%= @book.title %><br/>
 				<small style="font-size: 0.55em; color: #777; font-family: Georgia;">
-				Posted by: <span style="color: #428bca;"><%= @user.last_name %><span></small>
+				Posted by:<span style="color: #428bca;"><%= @user.last_name %><span></small> <br>
+				<small style="font-size: 0.55em; color: #777; font-family: Georgia; ">Date Posted: 
+				<span style="color: #428bca;"><%= @book.updated_at.strftime("%B, %d %Y") %><span></small>
+				
 			</div>
 			<div id="book_desc_show">
 				<strong style="line-height: 3;">Description:</strong> <br/>
@@ -23,7 +26,10 @@
 
 		<%= link_to "Back", book_index_path, id: "back_button" %>
 
-		<%= link_to "Add Another Book", new_book_path, id: "add_book_button" %>
+		<div id="request_button"> Request </div>
+
 		</div>
 	</div>
 </div>
+		<%= render 'requestmodal' %>
+

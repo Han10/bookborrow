@@ -2,11 +2,13 @@ Bookborrow::Application.routes.draw do
 
 
   root "static_pages#home"
-
+  resources :book
   post '/' => "static_pages#create"
   get '/account/:id' => "static_pages#account_info", as: "account"
   patch '/account/:id' => "static_pages#update"
-  resources :book
+  get '/view/:id' => "book#view", as: "view"
+  get '/requestmodal' => "book#requestmodal", as: "requestmodal"
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
