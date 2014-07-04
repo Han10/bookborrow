@@ -27,6 +27,21 @@ Bookborrow::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+ #SMTP GMail Settings
+  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+
+  config.action_mailer.delivery_method = :smtp
+
+  #GMAIL SETUP
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :user_name => ENV['SMTP_USER'],
+    :password => ENV['SMTP_PASSWORD'],
+    :authentication => 'plain',
+    :enable_starttls_auto => true
+  }
+  
     #AWS ACCESS KEY SETUP
   config.paperclip_defaults = {
     :storage => 's3',

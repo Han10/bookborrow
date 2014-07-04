@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+var book_id = null;
+var user_id = null;
+var book_email = null;
+
 $('.book_container').css({ 'height' : 2.25* $(window).height() });
 $('.book_container').css({ 'width' : $(window).width() });
 
@@ -41,12 +45,14 @@ function openModal() {
 
 	var book_title = $(this).data("book-title");
 	var book_poster_last_name = $(this).data("last-name");
-	var book_poster_email = $(this).data("book-email");
+	book_email = $(this).data("book-email");
+	user_id = $(this).data("user-id");
+	book_id = $(this).data("book-id");
 
 	$('div#modal_header').html("Request: <em>"+book_title+"</em>");
 	$('div#modal_body_container').html(
 		"<div id='posted_by'><strong>Posted by:</strong> "+book_poster_last_name+"</div><br>"+
-		"<div id='posted_by_email'><strong>"+book_poster_last_name+"'s email: </strong>"+book_poster_email+"</div>"
+		"<div id='posted_by_email'><strong>"+book_poster_last_name+"'s email: </strong>"+book_email+"</div>"
 		);
 		
 	 $('div#outter_modal').fadeTo(200, 1);
@@ -65,14 +71,17 @@ function closeModal() {
 function sendRequest(){
 
 	var message = $('textarea#modal_message').val();
-
+	
 	$.ajax({
 
 		url : "/requestmodal",
 		type : "POST",
 		dataType : "JSON",
 		data : {
-			message : message
+			message : message,
+			book_id : book_id,
+			user_id : user_id,
+			book_email : book_email
 		}, 
 			success: function(data, textStatus, jqXHR){
       		 closeModal();

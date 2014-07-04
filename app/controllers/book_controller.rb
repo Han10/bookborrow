@@ -1,14 +1,12 @@
 class BookController < ApplicationController
 
+  before_action :deny_access_if_not_logged_in, except: [:index]
+
   def index
   	@books = Book.paginate(:page => params[:page], :per_page => 5)
 
-    if session[:current_user_email] == nil
-      
+    if session[:current_user_email].nil?
       session[:current_user_email] = params[:user][:email]
-   
-    else
-      #nothing
     end
 
     @user = User.find_by email: session[:current_user_email]
@@ -28,10 +26,14 @@ class BookController < ApplicationController
   def requestmodal
 
     if request.post?
-      @success = true;
 
       message = params['message']
-      
+      requester = User.find(params['user_id'])
+      book = Book.find(params['book_id'])
+      poster = User.find_by email: params['book_email']
+      @success = true
+
+      UserMailer.request_email(requester,poster,book,message).deliver
       respond_to do |format|
         format.html
         format.json { render json: @success } 
@@ -80,6 +82,13 @@ class BookController < ApplicationController
 
     def book_params
       params.require(:book).permit(:title, :description, :thumbnail, :email)
+    end
+
+    def deny_access_if_not_logged_in
+
+      if session[:current_user_email] == nil
+        redirect_to root_path
+      end
     end
 end
 
