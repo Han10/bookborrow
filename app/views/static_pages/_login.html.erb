@@ -1,23 +1,11 @@
 <div id="login">
-<%= form_for @user, url: {controller: "book", action: "index"}, html: {method: "get" } do |f| %>
- 
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for @user, url: {controller: "static_pages", action: "login_authentication"}, html: {method: "post" } do |f| %>
 
   <div id="login_email_pass_container">
     <%= f.email_field :email, autofocus: true, placeholder: "email", class: "login_field" %>
     <%= f.password_field :pass, placeholder: "password", class: "login_field" %>
   </div>  
-
+  <%= notice %>
 <%= f.submit "Login", class: "createbutton" %>
 
 <% end %>

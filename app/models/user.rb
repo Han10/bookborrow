@@ -11,5 +11,17 @@ validates :gender, presence: true
 validates :pass, presence: true
 validates :password_confirmation, presence: true
 
+def authenticate_user email,password
+
+	all_users = User.all
+
+	all_users.each do | user |
+		if(user.email.eql?(email) && user.pass.eql?(password))
+			return true
+		end
+	end
+
+	return false
+end
 
 end

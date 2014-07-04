@@ -3,10 +3,14 @@ class BookController < ApplicationController
   before_action :deny_access_if_not_logged_in, except: [:index]
 
   def index
-  	@books = Book.paginate(:page => params[:page], :per_page => 5)
+    @books = Book.paginate(:page => params[:page], :per_page => 5)
 
     if session[:current_user_email].nil?
-      session[:current_user_email] = params[:user][:email]
+        begin
+          session[:current_user_email] = params[:user][:email]
+        rescue
+          redirect_to root_path
+        end
     end
 
     @user = User.find_by email: session[:current_user_email]
@@ -14,7 +18,7 @@ class BookController < ApplicationController
   end
 
   def show
-  	@book = Book.find(params[:id])
+    @book = Book.find(params[:id])
     @user = User.find_by email: session[:current_user_email]
   end
 
