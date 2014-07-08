@@ -1,19 +1,11 @@
 $(document).ready(function () {
 
-$('div#container').css({ 'height' : $(document).height() });
-$('div#container').css({ 'width' : $(document).width() });
+$('.home-container').css({ 'height' : $(window).height() });
+$('.home-container').css({ 'width' : $(window).width() });
 
-
-$("#signup_container").hide();
 $("#dropdown").hide();
-$("div#cancelbutton").hide();
 
-$("#signupbutton").click( function(){
-	$("#login_container").hide();
-	$("#signupbutton").hide();
-	$('#signup_container').fadeTo(200, 1);
-	$('#cancelbutton').fadeTo(200, 1);
-});
+$('#cancel-button').css({'width' : $('#createbutton').width()+'px'});
 
 $("#topdropdown").click(function(){
 
@@ -35,16 +27,17 @@ $(document).mouseup(function (e)
     }
 });
 
-$("#cancelbutton").click( function(){
-	$("#signup_container").hide();
-	$("#cancelbutton").hide();
-	$('#login_container').fadeTo(200, 1);
-	$('#signupbutton').fadeTo(200, 1);
-});
-
 $('a.next_page').html("Next") ;
 $('span.previous_page.disabled').html("Previous");
 $('a.previous_page').html("Previous") ;
 $('span.next_page.disabled').html("Next");
+
+//Notices Javascript
+
+	$('span#close_unsuccessful_login').click( function(){
+		$('div#unsuccessful_login').hide();
+	});
+
+//Signup Javascript
 
 });

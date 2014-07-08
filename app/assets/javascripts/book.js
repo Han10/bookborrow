@@ -45,14 +45,15 @@ function openModal() {
 
 	var book_title = $(this).data("book-title");
 	var book_poster_last_name = $(this).data("last-name");
+	var user_email = $(this).data('user-email');
 	book_email = $(this).data("book-email");
 	user_id = $(this).data("user-id");
 	book_id = $(this).data("book-id");
 
 	$('div#modal_header').html("Request: <em>"+book_title+"</em>");
 	$('div#modal_body_container').html(
-		"<div id='posted_by'><strong>Posted by:</strong> "+book_poster_last_name+"</div><br>"+
-		"<div id='posted_by_email'><strong>"+book_poster_last_name+"'s email: </strong>"+book_email+"</div>"
+		"<div id='posted_by'><strong>To:</strong> <em>"+book_poster_last_name+"</em></div><br>"+
+		"<div id='posted_by_email'><strong>From: </strong>"+user_email+"</div>"
 		);
 		
 	 $('div#outter_modal').fadeTo(200, 1);

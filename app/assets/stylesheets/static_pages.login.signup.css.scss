@@ -1,0 +1,72 @@
+/* All CSS corresponding to the signup page */
+a#signup-link {
+	display: block;
+	position: relative;
+	bottom: 1%;
+	left: 3.5%;
+	color: #428bca;
+	font-size: 0.85em;
+	text-align: left;
+}
+
+#signup-container {
+	color: #fff;
+	background-color: rgba(51,51,51,0.9);
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 2%;
+	min-height: 60%;
+	max-height: 80%;	
+	width: 48%;
+	font-size: 1.2em;
+	font-family: "Myriad Pro", serif;
+	border: 1px solid #333;
+}
+
+a#signup-link:hover{
+	opacity: 0.8;
+	color: #eee;
+}
+
+
+.login-container {
+	color: #fff;
+	border: 1px solid #333;
+	background-color: rgba(51,51,51,0.9);
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 4%;
+	min-height: 30%;
+	max-height: 40%;
+	width: 48%;
+	font-size: 1.2em;
+	font-family: "Myriad Pro", serif;
+}
+
+#login {
+	margin: 8% 0px 5%;
+}
+
+#signup-title {
+	color: #fff;
+	font-size: 2.5em;
+	padding-bottom: 3%;
+	padding-top: 2%;
+}
+
+#cancel-button {
+	background-color: #d9534f;
+	margin-top: 2%;
+	padding: 2.5% 6%;
+	font-size: 1em;
+	border-radius: 3px;
+	font-family: "Myriad Pro", serif;
+	color: #eee;
+	border: 1px solid #333;
+	text-align: center;
+}
+
+#cancel-button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}

@@ -16,32 +16,18 @@ div#account_title{
 	color: #333;
 }
 
-#home_page_text {
+.home_page_text {
 
 font-family: "Myriad Pro", serif;
-padding-top: 3%;
+padding-top: 6%;
 text-align: center;
 margin: 0 auto;
 width: 60% ;	
 height: 100%;
 }
 
-span#bb_title {
-
-	color: #eee;
-  	font-size: 5em;
-
-}
-
-
-.bb-logo {
-	height:15%;
-}
-
-#home_page_text span #subtext {
-
-	font-size: 0.3em;
-
+#bb-logo {
+	width: 100%;
 }
 
 table {
@@ -51,40 +37,14 @@ table {
 
 }
 
-#signup_container {
-	color: #fff;
-	background-color: #333;
-	border-radius: 10px;
-	margin: 0 auto;
-	margin-top: 6%;
-	height: 58%;
-	width: 48%;
-	font-size: 1.2em;
-	font-family: "Myriad Pro", serif;
-	border: 1px solid #333;
-}
 
-#login_container {
-	color: #fff;
-	border: 1px solid #333;
-	background-color: rgba(51,51,51,0.9);
-	border-radius: 10px;
-	margin: 0 auto;
-	margin-top: 8%;
-	height: 30%;
-	width: 48%;
-	font-size: 1.2em;
-	font-family: "Myriad Pro", serif;
-}
-
-div#login {
-	margin: 8% 0px;
-}
 
 td input {
-	padding: 6% 3%;
-	border-radius: 4%;
-	border: 1px solid #aaa;
+	padding: 3% 4%;
+	border-radius: 5px;
+	color: #555;
+	font-size: 1em;
+	border: 0px;
 }
 
 select {
@@ -92,10 +52,10 @@ select {
 	border-radius: 8%;
 }
 
-input.createbutton {
+.createbutton {
 	margin-top: 2%;
 	padding: 2.5% 6%;
-	width: 30%;
+	width: 45%;
 	font-size: 1em;
 	border-radius: 3px;
 	font-family: "Myriad Pro", serif;
@@ -125,53 +85,9 @@ div#updatebutton input:hover {
 	opacity: 0.9;
 }
 
-input.createbutton:hover {
+.createbutton:hover {
 	cursor: pointer;
 	opacity: 0.9;
-}
-
-div#cancelbutton {
-	background-color: #d9534f;
-	width: 40%;
-	height: 4.3%;
-	font-size: 1.2em;
-	border-radius: 5px;
-	padding: 1.25% 0px;
-	text-align: center;
-	color: #fff;
-	margin: 0 auto;
-	margin-top: 2%;
-}
-
-div#cancelbutton:hover {
-	cursor: pointer;
-	opacity: 0.8;
-}
-
-div#signupbutton {
-	background-color: #428bca;
-	width: 40%;
-	height: 4.3%;
-	font-size: 1.2em;
-	border-radius: 5px;
-	padding: 1.25% 0px;
-	text-align: center;
-	color: #333;
-	margin: 0 auto;
-	margin-top: 2%;
-
-}
-
-div#signupbutton:hover {
-	cursor: pointer;
-	color: #eee;
-}
-
-div#title {
-	color: #fff;
-	font-size: 2.5em;
-	padding-bottom: 5%;
-	padding-top: 2%;
 }
 
 a {

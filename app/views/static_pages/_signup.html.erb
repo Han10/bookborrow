@@ -1,59 +1,7 @@
-<div id="title">Sign Up</div>
-<div style="padding-bottom: 5%;">
-<%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
 
-	<table>
-	<tr>
-	    <td>
-	    	<%= f.label :first_name, "First Name" %>
-	    </td>
-	    <td>
-	    	<%= f.text_field :first_name, placeholder: "First Name" %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	   		<%= f.label :last_name, "Last Name" %>
-	    </td>
-	    <td>
-			<%= f.text_field :last_name, placeholder: "Last Name" %>
-		</td>
-	  </div>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :email, "Email" %>
-	    </td>
-	    <td>
-	    	<%= f.email_field :email, placeholder: "Your Email Address" %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :pass, "Password" %> 
-	    </td>
-	    <td>
-	    	<%= f.password_field :pass, placeholder: "New Password" %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :password_confirmation, "Confirm Password" %>
-	    </td>
-	    <td>
-	    	<%= f.password_field :password_confirmation, placeholder: "Re-Enter Password" %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :gender, "Gender" %>
-	    </td>
-	    <td>
-	    	<%= f.radio_button :gender, "Male"%>Male
-	    	<%= f.radio_button :gender, "Female"%>Female
-	    </td>
-	</tr>
-</table>
+<div id="title" >Sign Up</div>
+	<div style="padding-bottom: 5%;">
+	<%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -65,6 +13,19 @@
       </ul>
     </div>
   <% end %>
-<%= f.submit "Create", class: "createbutton"%>
-<% end %>
+		<%= notice %><br>
+		<%= f.text_field :first_name, placeholder: "First Name", class: "login_field" %>
+		<%= f.text_field :last_name, placeholder: "Last Name", class: "login_field" %>
+		<%= f.email_field :email, placeholder: "Your Email Address", class: "login_field", id: "email"%>
+		<%= f.password_field :pass, placeholder: "New Password", class: "login_field", id: "pass" %>
+		<%= f.password_field :password_confirmation, placeholder: "Re-Enter Password", class: "login_field" %><br><br>
+		<%= f.label :gender, "Gender:" %> &emsp;
+		<%= f.radio_button :gender, "Male"%>Male
+		<%= f.radio_button :gender, "Female"%>Female
+		<br><br>
+
+		<%= f.submit "Create", class: "createbutton", id: "createbutton" %>
+
+	<% end %>
 </div>
+

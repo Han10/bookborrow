@@ -15,6 +15,7 @@ cursor: pointer;
 }
 
 div#modal {
+	border: 1px solid black;
 	height: 60%;
 	width: 25%;
 	left: 50%;
@@ -74,8 +75,7 @@ div#modal_body_container {
 	line-height: 80%;
 	color: #666;
 	font-family: Georgia, serif;
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin: 2% 0;
 	margin-left: 3%;
 }
 
@@ -94,7 +94,7 @@ div#modal_message_container {
 }
 
 textarea#modal_message{
-margin-top: 2%;
+margin: 2% auto;
 border-radius: 2%;
 width: 92%;
 padding: 2%;
@@ -137,6 +137,6 @@ div#modal_cancel_button:hover {
 
 div#send_cancel_container {
 	width: 55%;
-	margin: 10% auto;
+	margin: 4% auto;
 	height: 12%;
 }

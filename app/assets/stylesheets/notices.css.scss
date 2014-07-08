@@ -1,0 +1,17 @@
+div#unsuccessful_login {
+	color: #fff;
+	padding: 1.5% 1%;
+	background-color: #d9534f;
+	width: 70%;
+	margin: 0 auto;
+	font-style: oblique;
+	border-radius: 5px;
+	margin-bottom: 2%;
+}
+
+span#close_unsuccessful_login {
+	float: right;
+	margin-right: 3%;
+	color: #fff;
+	cursor: pointer;
+}

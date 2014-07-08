@@ -1,18 +1,26 @@
 class StaticPagesController < ApplicationController
 
-skip_before_filter  :verify_authenticity_token
 
 def login_page
 	@user = User.new
 	session[:current_user_email] = nil
 end
 
+def signup
+	@user = User.new
+end
+
 def create
 
-	@user = User.new(user_params)
+@user = User.new(user_params)
 
-	if @user.save
-		redirect_to book_index_path
+	if @user.valid?
+		if @user.save
+			redirect_to book_index_path
+		end
+	else
+		flash[:unsuccessful_signup] = "Oh snap!"
+		render :signup
 	end
 	
 end
@@ -23,10 +31,11 @@ def login_authentication
 	password = params[:user][:pass]
 	user = User.new
 	if user.authenticate_user(email,password)
+		session[:current_user_email] = email
 		redirect_to book_index_path
 	else
+		flash[:unsuccessful_login] = "Invalid email or password."
 		redirect_to root_path
-		flash[:notice] = "Invalid email or password."
 	end
 
 end

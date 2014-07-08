@@ -1,39 +1,32 @@
-<div id="signup_container">
+<div class="home-container">
+	<div class="home_page_text">
+		<%= image_tag "bookborrow-logo.png", id: "bb-logo", alt: "Book Borrow Logo" %> 
+		<div id="signup-container">
+		<div id="signup-title" >Sign Up</div>
+			<%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
+		  		
+		  		 <!-- Error message: Unscuccessful login -->
+				     <% if flash[:unsuccessful_signup] %>
+				        <div id="unsuccessful_login">
+				            <%= flash[:unsuccessful_signup] %>
+				        <span id="close_unsuccessful_login">&times;</span>
+				        </div>
+				    <% end %>
 
-<span> 
+				<%= notice %><br>
+				<%= f.text_field :first_name, placeholder: "First Name", class: "login_field" %>
+				<%= f.text_field :last_name, placeholder: "Last Name", class: "login_field" %>
+				<%= f.email_field :email, placeholder: "Your Email Address", class: "login_field", id: "email"%>
+				<%= f.password_field :pass, placeholder: "New Password", class: "login_field", id: "pass" %>
+				<%= f.password_field :password_confirmation, placeholder: "Re-Enter Password", class: "login_field" %>
+				<br>
+			
+				<%= f.submit "Create", class: "createbutton", id: "createbutton" %>
+				<%= link_to "Cancel", root_path ,id: "cancel-button" %>
+			
+			<% end %>
+		</div>
+		</div>
 
-</span>
-
-<%= form_for @user, url: {controller: "static_pages", action: "create"} do |f| %>
- 
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-				<%= f.label :first_name, "First Name" %>
-				<%= f.text_field :first_name %><br>
-			
-				<%= f.label :last_name, "Last Name" %>
-				<%= f.text_field :last_name %><br>
-			
-				<%= f.label :email, "Email Address" %>
-				<%= f.text_field :email %><br>
-			
-				<%= f.label :password, "Password" %>
-				<%= f.text_field :password %><br>
-			
-				<%= f.label :password_confirmation, "Confirm" %>
-				<%= f.text_field :password_confirmation %><br>
-			
-				<%= f.submit "Submit"%>
-				<%= link_to "Back", root_path, id: "backbutton" %>		
-<% end %>
+	</div>
 </div>

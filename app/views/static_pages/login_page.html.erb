@@ -1,24 +1,29 @@
-<div id="home_container">
-	<div id="home_page_text">
+<div class="home-container">
+	<div class="home_page_text">
+		<%= image_tag "bookborrow-logo.png", id: "bb-logo", alt: "Book Borrow Logo" %> 
+		<div class="login-container">
+			<div id="login">
+			   
+			    <%= form_for @user, url: {controller: "static_pages", action: "login_authentication"}, html: {method: "post" } do |f| %>
+			     
+			     <!-- Error message: Unscuccessful login -->
+				     <% if flash[:unsuccessful_login] %>
+				        <div id="unsuccessful_login">
+				            <%= flash[:unsuccessful_login] %>
+				        <span id="close_unsuccessful_login">&times;</span>
+				        </div>
+				    <% end %>
 
-	<span id="bb_title">
-		Book Borrow <br>
-		<div id="subtext"> 
-		Your Local Non-profit Book Sharing Website</div>
-	</span>
+			    <div id="login_email_pass_container">
+			      <%= f.email_field :email, autofocus: true, placeholder: "email", class: "login_field" %>
+			      <%= f.password_field :pass, placeholder: "password", class: "login_field" %>
+			    </div>  
+			    
+			    <%= f.submit "Login", class: "createbutton" %>
 
-		<div id="login_container">
-			<%= render 'login' %>
-		</div>
-		<div id="signupbutton">
-			Create Account
-		</div>
-
-		<div id="signup_container">
-		<%= render 'signup' %>
-		</div>
-		<div id="cancelbutton">
-			Cancel
+			    <% end %>
+			</div>
+		<%= link_to "Create an account", signup_path , id: "signup-link" %>
 		</div>
 	</div>
 </div>
