@@ -16,6 +16,8 @@ $("#topdropdown").click(function(){
 		}
 });
 
+
+
 $(document).mouseup(function (e)
 {
     var container = $("#account_dropdown");
@@ -26,6 +28,8 @@ $(document).mouseup(function (e)
         $("#dropdown").hide();
     }
 });
+
+//Pagination Javascript
 
 $('a.next_page').html("Next") ;
 $('span.previous_page.disabled').html("Previous");
@@ -40,4 +44,54 @@ $('span.next_page.disabled').html("Next");
 
 //Signup Javascript
 
+	$('#signup-first-name').keyup(alphaNumeric);
+	$('#signup-last-name').keyup(alphaNumeric);
+	$('#signup-email').keyup(emailValidation);
+	$('#signup-pass').keyup(alphaNumeric);
+	$('#signup-pass-conf').keyup(alphaNumeric);
+
 });
+
+function alphaNumeric(){
+
+		if($(this).val().match( /[^a-zA-Z0-9]/) || $(this).val() == ""){
+			if(!$(this).parent().is('.field_with_errors')){
+				$(this).wrap("<div class='field_with_errors'></div>");
+				$(this).focus();
+			}
+		}else{
+			if($(this).parent().is('.field_with_errors')){
+				$(this).unwrap();
+				$(this).focus();
+			}else{
+				if(!$(this).parent().is('.field_with_success')){
+					$(this).wrap("<div class='field_with_success'></div>");
+					$(this).focus();
+				}
+			}
+		}
+
+	return false;
+}
+
+function emailValidation(){
+
+		if(!$(this).val().match(/[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/) || $(this).val() == ""){
+			if(!$(this).parent().is('.field_with_errors')){
+				$(this).wrap("<div class='field_with_errors'></div>");
+				$(this).focus();
+			}
+		}else{
+			if($(this).parent().is('.field_with_errors')){
+				$(this).unwrap();
+				$(this).focus();
+			}else{
+				if(!$(this).parent().is('.field_with_success')){
+					$(this).wrap("<div class='field_with_success'></div>");
+					$(this).focus();
+				}
+			}
+		}
+
+	return false;
+}

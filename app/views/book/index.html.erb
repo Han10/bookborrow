@@ -25,8 +25,7 @@
 		<div id="search_bar">
 			<%= form_tag book_index_path, :method => :get do %>
 			    <%= text_field_tag :search, params[:search], placeholder: "" %>
-
-			    <%= submit_tag "Search", class: "submit_button" %>
+			    <%= submit_tag "Search", name: nil, class: "submit_button" %>
 			<% end %>
 		</div>
 

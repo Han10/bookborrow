@@ -19,8 +19,8 @@ def create
 			redirect_to book_index_path
 		end
 	else
-		flash[:unsuccessful_signup] = "Oh snap!"
-		render :signup
+		flash[:unsuccessful_signup] = "Oh snap! Change a few things up and try submitting again"
+			render :signup	
 	end
 	
 end

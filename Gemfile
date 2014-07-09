@@ -19,6 +19,9 @@ gem 'will_paginate', '~> 3.0'
 gem 'paperclip-aws'
 gem 'aws-sdk'
 gem 'simple_form'
+gem 'sunspot_rails', '2.1.0'
+gem 'sunspot_solr', '2.1.0'
+gem 'progress_bar'
 
 group :development do
 	gem 'pry'

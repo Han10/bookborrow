@@ -2,6 +2,11 @@ class Book < ActiveRecord::Base
 
 attr_accessible :title, :description, :thumbnail, :email
 
+searchable do
+	text :title
+	text :description
+end
+
 has_attached_file :thumbnail,
 				  :storage => :s3,
 				  :region => 'us-west-2',
@@ -47,5 +52,7 @@ def last_name
 	end
 
 end
+
+
 
 end

@@ -3,8 +3,11 @@ class BookController < ApplicationController
   before_action :deny_access_if_not_logged_in
 
   def index
-    @books = Book.paginate(:page => params[:page], :per_page => 5)
     @user = User.find_by email: session[:current_user_email]
+    
+    @books = Book.search do
+      fulltext params[:search]
+    end.results
 
     respond_to do |format|
       format.html
