@@ -25,16 +25,20 @@ validates_attachment :thumbnail,
 
 def desc 
 
-	if self.description.length > 140 
-		desc_min = self.description[ 0.. self.description.index('.')]
-		if desc_min.length < 140
-			desc_min = self.description[0 .. self.description.index(/\./, self.description.index('.')+1) ]
-		end
-	else
-		desc_min = self.description
-	end 
-	
-	return desc_min
+#	if self.description.length > 140 
+#		desc_min = self.description[ 0.. self.description.index('.')]
+#		if desc_min.length < 140
+#			desc_min = self.description[0 .. self.description.index(/\./, self.description.index('.')+1) ]
+#		end
+#	else
+#		desc_min = self.description
+#	end 
+    if self.description.length>250
+    	return self.description[0.. 250]+'...'
+else
+
+	return self.description[ 0.. 250]
+end
 
 end
 

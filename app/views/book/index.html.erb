@@ -13,7 +13,7 @@
 							<%= link_to "Account Info", account_path(@user) %>
 						</li>
 						<li>
-							<%= link_to "Book Posts", "#" %>
+							<%= link_to "My Posts", "#" %>
 						</li>
 						<li>
 							<%= link_to "Logout", root_path %>
@@ -24,15 +24,21 @@
 		</div>
 		<div id="search_bar">
 			<%= form_tag book_index_path, :method => :get do %>
+				<%= select_tag :category, options_for_select([['All', 'All'], ['Law', 'Law'],['Science', 'Science'],['Engineering', 'Engineering'], 
+								['Business', 'Business'], ['Social Science', 'Social Science'], ['Medicine', 'Medicine']])  %>
 			    <%= text_field_tag :search, params[:search], placeholder: "" %>
 			    <%= submit_tag "Search", name: nil, class: "submit_button" %>
 			<% end %>
 		</div>
-
-		<div id="body_container">
+		<div id="menu-bar">
+			Home | Law | Arts | Science | Engineering | Business | Social Science | Medicine
+		</div>
+		<div id="number-book-results"></div>
 			<div id="postbutton">
 				<%= link_to "Post", new_book_path %>
 			</div>
+		<div id="body_container">
+		<div id="bread-crumbs"> Home </div>
 
 			<%= render 'book_table' %>
 		</div>

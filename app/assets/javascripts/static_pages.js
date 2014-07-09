@@ -1,7 +1,12 @@
 $(document).ready(function () {
 
-$('.home-container').css({ 'height' : $(window).height() });
-$('.home-container').css({ 'width' : $(window).width() });
+$('body > .home-container').css({ 'height' : $(window).height() });
+$('body > .home-container').css({ 'width' : $(window).width() });
+
+// Height and Width of the Footer
+$('#footer-outter-container').css({ 'height' : 0.1*$(window).height() });
+$('#footer-outter-container').css({ 'width' : $(window).width() });
+
 
 $("#dropdown").hide();
 
@@ -43,7 +48,6 @@ $('span.next_page.disabled').html("Next");
 	});
 
 //Signup Javascript
-
 	$('#signup-first-name').keyup(alphaNumeric);
 	$('#signup-last-name').keyup(alphaNumeric);
 	$('#signup-email').keyup(emailValidation);
@@ -53,6 +57,10 @@ $('span.next_page.disabled').html("Next");
 });
 
 function alphaNumeric(){
+
+
+if(event.keyCode != 9 ){
+	
 
 		if($(this).val().match( /[^a-zA-Z0-9]/) || $(this).val() == ""){
 			if(!$(this).parent().is('.field_with_errors')){
@@ -70,11 +78,13 @@ function alphaNumeric(){
 				}
 			}
 		}
-
+}
 	return false;
 }
 
 function emailValidation(){
+
+if(event.keyCode != 9 ){
 
 		if(!$(this).val().match(/[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/) || $(this).val() == ""){
 			if(!$(this).parent().is('.field_with_errors')){
@@ -92,6 +102,6 @@ function emailValidation(){
 				}
 			}
 		}
-
+}
 	return false;
 }

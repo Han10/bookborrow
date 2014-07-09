@@ -7,6 +7,8 @@ var book_email = null;
 $('.book_container').css({ 'height' : 2.25* $(window).height() });
 $('.book_container').css({ 'width' : $(window).width() });
 
+
+
 $('.small_book_container').css({ 'height' : $(window).height() });
 $('.small_book_container').css({ 'width' : $(window).width() });
 

@@ -7,6 +7,7 @@ class BookController < ApplicationController
     
     @books = Book.search do
       fulltext params[:search]
+      paginate per_page: 5
     end.results
 
     respond_to do |format|
@@ -57,7 +58,9 @@ class BookController < ApplicationController
     @book.user_id = user.id
     
     if @book.save
+      Book.reindex
       redirect_to @book
+
     else
       # DO SOMETHING ELSE
     end
@@ -71,6 +74,7 @@ class BookController < ApplicationController
     @book = Book.find(params[:id])
 
     if @book.update(book_params)
+      Book.reindex
       redirect_to @book
     else
       # DO SOMETHING ELSE

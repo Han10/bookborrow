@@ -9,13 +9,14 @@ production:
     # open_timeout: 0.5
 development:
   solr:
-    hostname: index.websolr.com
-    port: 80
+    hostname: localhost
+    port: 8982
     log_level: INFO
-    path: /solr/8c7cb9dda71
+    path: /solr/development
+
 test:
   solr:
-    hostname: index.websolr.com
-    port: 80
+    hostname: localhost
+    port: 8981
     log_level: WARNING
-    path: /solr/8c7cb9dda71
+    path: /solr/test

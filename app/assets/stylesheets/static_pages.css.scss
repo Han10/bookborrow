@@ -8,6 +8,11 @@ body {
   	margin: 0px;
 }
 
+.home-container {
+	height: 100%;
+	width: 100%;
+}
+
 div#account_title{
 	padding: 5% 0;
 	font-size: 3em;
@@ -17,7 +22,6 @@ div#account_title{
 }
 
 .home_page_text {
-
 font-family: Helvetica, sans-serif;
 padding-top: 6%;
 text-align: center;
@@ -47,7 +51,6 @@ td input {
 
 select {
 	padding: 6% 5%;
-	border-radius: 8%;
 }
 
 
@@ -72,6 +75,7 @@ div#updatebutton input:hover {
 
 a {
 	text-decoration: none;
+	color: #eee;
 }
 
 .pagination {
