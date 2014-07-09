@@ -20,5 +20,11 @@
 		</div>
 	</div>
 	<% end %>
+
+ <% unless @books.blank? %>
+ <%= will_paginate @books, :page_links => false %>
+ <% end %>
+
 <%= will_paginate @books, :page_links => false %>
+
 </div>

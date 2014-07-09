@@ -6,7 +6,7 @@ has_many :books
 
 validates :first_name, presence: true, format: {with: /[a-zA-Z0-9]+/, message: "only allow letters"}
 validates :last_name, presence: true, format: {with: /[a-zA-Z0-9]+/, message: "only allow letters"}
-validates :email, presence: true, uniqueness: true, format: {with: /[a-zA-Z0-9]+@[a-zA-Z0-9]\.[a-zA-Z0-9]/, message: "only allow letters"}
+validates :email, presence: true, uniqueness: true, format: {with: /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/, message: "only allow letters"}
 validates :pass, presence: true, confirmation: true, format: {with: /[a-zA-Z0-9#$@]+/, message: "only allow letters"}
 validates :password_confirmation, presence: true, format: {with: /[a-zA-Z0-9#$@]+/, message: "only allow letters"}
 
