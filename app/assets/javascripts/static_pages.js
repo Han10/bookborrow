@@ -4,8 +4,8 @@ $('body > .home-container').css({ 'height' : $(window).height() });
 $('body > .home-container').css({ 'width' : $(window).width() });
 
 // Height and Width of the Footer
-//$('#footer-outter-container').css({ 'height' : 0.1*$(window).height() });
-//$('#footer-outter-container').css({ 'width' : $(window).width() });
+$('#footer-outter-container').css({ 'height' : 0.1*$(window).height() });
+$('#footer-outter-container').css({ 'width' : $(window).width() });
 
 
 $("#dropdown").hide();

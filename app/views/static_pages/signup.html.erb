@@ -1,16 +1,6 @@
 <div class="home-container">
 	<div class="home_page_text">
-		<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h2>
- 
-    <ul>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+
 		<%= image_tag "bookborrow-logo.png", id: "bb-logo", alt: "Book Borrow Logo" %> 
 		  		 <!-- Error message: Unscuccessful login -->
 				     <% if flash[:unsuccessful_signup] %>
