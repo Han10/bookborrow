@@ -1,0 +1,26 @@
+div#unsuccessful_login {
+	
+	padding: 1.5% 1%;
+	width: 70%;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-bottom: 2%;
+	color: #a94442;
+	background-color: #f2dede;
+	border: 1px solid #a94442;;
+}
+
+span#close_unsuccessful_login {
+	float: right;
+	margin-right: 3%;
+	color: #a94442;
+	cursor: pointer;
+}
+
+.field_with_errors > input.login_field {
+	box-shadow: inset 0px 0px 10px 3px #d9534f;
+}
+
+.field_with_success> input.login_field {
+	box-shadow: inset 0px 0px 10px 3px #5cb85c;
+}

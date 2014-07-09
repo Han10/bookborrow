@@ -1,0 +1,43 @@
+<div class="small_book_container">
+	<div class="inner_book_container">
+
+	<div id="account_title">
+		Post Book
+	</div>
+
+	<%= form_for @book, url: {controller: "book", action: "create"} do |f| %>
+
+	<table>
+	<tr>
+	    <td>
+	    	<%= f.label :title, "Book Title" %>
+	    </td>
+	    <td>
+	    	<%= f.text_field :title %>
+	    </td>
+	</tr>
+	<tr>
+	    <td style="vertical-align: text-top;">
+	   		<%= f.label :description, "Book Description" %>
+	    </td>
+	    <td>
+			<%= f.text_area :description, rows: 10, cols: 40 %>
+		</td>
+	  </div>
+	</tr>
+	<tr>
+	    <td>
+	    	<%= f.label :thumbnail, "Upload Photo" %>
+	    </td>
+	    <td>
+	    	<%= f.file_field :thumbnail %>
+	    </td>
+	</tr>
+</table>
+<div id="updatebutton">
+<%= f.submit "Save"%>
+</div>
+<% end %>
+
+	</div>
+</div>

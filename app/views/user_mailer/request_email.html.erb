@@ -1,0 +1,8 @@
+<p>Hey <%= @poster.first_name.capitalize %> <%= @poster.last_name.capitalize %>!</p>
+
+<p>A kind person named <%= @requester.first_name.capitalize %> <%= @requester.last_name.capitalize %> has requested: <em><%= @book.title_min %></em></p>
+<% unless @message.blank? %>	
+<p>Requesters message: </p>
+<p><%= @message %></p>
+<% end %>
+<p>Respond back to <%= @requester.email %> if you would like to lend your book out. </p>
