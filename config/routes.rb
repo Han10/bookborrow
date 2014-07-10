@@ -6,6 +6,7 @@ Bookborrow::Application.routes.draw do
   resources :book
   get '/signup' => "static_pages#signup"
   post '/signup' => "static_pages#create"
+  post '/email_exist' => "static_pages#email_exist"
   post '/login_authentication' => "static_pages#login_authentication"
   get '/account/:id' => "static_pages#account_info", as: "account"
   patch '/account/:id' => "static_pages#update"

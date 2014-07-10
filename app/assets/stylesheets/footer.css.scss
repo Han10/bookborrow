@@ -1,16 +1,50 @@
 #footer-outter-container {
-	background-color: #111;
-	color: #eee;
+	background-color: #222;
 }
 
 #footer-inner-container {
-	font-family: Helvetica, sans-serif;
+	font-family: "quicksandregular", Helvetica, sans-serif;
 	margin: 0 auto;
-	width: 60%;
 	height: 100%;
 	font-size: 0.9em;
+	text-align: center;
+	position: relative;
 }
 
-#misc-links {
-	
+#footer-inner-container > table {
+	width: 50%;
+	margin: auto;
+	position: absolute;
+	table-layout: fixed;
+	height: 50%;
+	vertical-align: middle;
+	text-align: center;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 }
+
+#footer-inner-container  td  a {
+	color: #aaa;
+
+	&:hover{
+		color: #eee;
+	}
+}
+
+#signature {
+	position: absolute;
+	bottom: 10%;
+	left: 1%;
+	color: #aaa;
+	font-style: oblique;
+	font-family: cursive;
+	font-size: 0.8em;
+}
+
+#signature a:hover {
+	color: #5bc0de;
+}
+
+

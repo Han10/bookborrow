@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-$('body > .home-container').css({ 'height' : $(window).height() });
+$('body > .home-container').css({ 'height' : 0.93*$(window).height() });
 $('body > .home-container').css({ 'width' : $(window).width() });
 
 // Height and Width of the Footer
-$('#footer-outter-container').css({ 'height' : 0.1*$(window).height() });
+$('#footer-outter-container').css({ 'height' : 0.07*$(window).height() });
 $('#footer-outter-container').css({ 'width' : $(window).width() });
 
 
@@ -105,3 +105,4 @@ if(event.keyCode != 9 ){
 }
 	return false;
 }
+
