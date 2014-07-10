@@ -34,7 +34,6 @@ div#body_container {
 	margin-right: 2%;
 	margin-top: 2%;
 	float: right;
-	width: 13%;
 	text-align: center;
 }
 
@@ -261,7 +260,9 @@ a#back_button:hover {
 }
 
 #menu-bar {
+	width: 100%;
 	text-align: center;
+	display: table;
 	border-top: 1px solid #555;
 	border-bottom: 1px solid #555;
 	font-family: Helvetica, sans-serif;
@@ -279,30 +280,35 @@ a#back_button:hover {
 }
 
 select#category {
-padding: 1% 1%;
-	border: 0px;
-	margin: 0px;
-	color: #333;
-	margin-left: -1%;
+ 	outline: none;
+ 	width: 10%;
+	padding: 1% 2%;
+	border-radius: 2px;
 	border: 1px solid #aaa;
 	font-size: 1.2em;
-	display: inline-block;
-	
+	color: #555;
+	-webkit-appearance: none;
+	/*background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;*/
 }
 
+
 #search_bar form {
-	display: inline-block;
+	text-align: center;
 	width: 100%;
-	float: left;
+	display:inline-table;
+	margin:0 auto;
 }
 
 #search_bar{
-	width:70%;
-	height: 6%;
+	width:100%;
+	height: 8%;
 	margin: 0 auto;
+	display: table;
+
 }
 
 input.submit_button {
+	background: -webkit-linear-gradient(top, rgb(248, 227, 173), rgb(238, 186, 55));
 	padding: 1% 1%;
 	border: 0px;
 	margin: 0px;
