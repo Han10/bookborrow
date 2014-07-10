@@ -3,11 +3,11 @@ class BookController < ApplicationController
   before_action :deny_access_if_not_logged_in
 
   def index
-    @user = User.find_by email: session[:current_user_email]
+    @user ||= User.find_by email: session[:current_user_email]
     
     @books = Book.search do
       fulltext params[:search]
-      paginate per_page: 5
+      paginate page: params[:page], per_page: 5
     end.results
 
     respond_to do |format|
@@ -36,11 +36,10 @@ class BookController < ApplicationController
       book = Book.find(params['book_id'])
       poster = User.find_by email: params['book_email']
 
-      @success = true
       UserMailer.request_email(requester,poster,book,message).deliver
       respond_to do |format|
         format.html
-        format.json  {render json: @success }
+        format.json  {render json: true }
       end
 
     end

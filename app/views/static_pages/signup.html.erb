@@ -18,7 +18,8 @@
 				<%= f.email_field :email, placeholder: "Your Email Address", class: "login_field", id: "signup-email" %>
 				<%= f.password_field :pass, placeholder: "New Password", class: "login_field", id: "signup-pass" %>
 				<%= f.password_field :password_confirmation, placeholder: "Re-Enter Password", class: "login_field", id: "signup-pass-conf" %>
-				<br><br>
+				
+				<div style="padding: 2%;"></div>
 			
 				<%= f.submit "Create", class: "createbutton", id: "createbutton" %>
 				<%= link_to "Cancel", root_path ,id: "cancel-button" %>

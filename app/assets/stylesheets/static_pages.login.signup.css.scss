@@ -1,4 +1,5 @@
 /* All CSS corresponding to the signup page */
+
 a#signup-link {
 	width: 40%;
 	margin: 0px;
@@ -7,14 +8,13 @@ a#signup-link {
 	margin-top: 1%;
 	margin-bottom: 1.5%;
 	left: 3.5%;
-	color: #428bca;
-	font-size: 0.85em;
+	color: #5bc0de;
+	font-size: 0.80em;
 	text-align: left;
 }
 
 a#signup-link:hover{
 	opacity: 0.8;
-	color: #eee;
 }
 
 form#new_user.new_user {
