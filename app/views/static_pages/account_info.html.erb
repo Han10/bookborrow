@@ -20,7 +20,7 @@
 		   		<%= f.label :password_confirmation, "Password Confirmation", class: "post-book-label" %><br>
 
 				<%= f.password_field :password_confirmation, class: "new-book-title-faculty" %><br><br>
-				<%= f.submit "Edit"%> <%= button_tag "Back",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
+				<%= f.submit "Edit", class: 'submit-button' %> <%= button_tag "Back",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
 
 				<% end %>
 

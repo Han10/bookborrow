@@ -4,7 +4,6 @@ var book_id = null;
 var user_id = null;
 var book_email = null;
 
-$('.header-container').css({ 'height' : 0.4* $(window).height() });
 $('.bookcontainer').css({ 'height' : 0.3* $(window).height() });
 $('.body-container').css({ 'min-height' : 0.8* $(window).height() });
 

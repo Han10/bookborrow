@@ -56,7 +56,7 @@ a {
 
 a.next_page, span.previous_page.disabled,
  	a.previous_page, span.next_page.disabled {
- 		color: #333;
+ 		color: #333; 
  		padding: 5% 4%;
  		width: 40%;
  		font-size: 1.3em;
@@ -81,4 +81,8 @@ input.login_field {
 	font-size: 1em;
 	border: 0px;
 	outline:none;
+}
+
+.submit-button {
+	-webkit-appearance: button;
 }

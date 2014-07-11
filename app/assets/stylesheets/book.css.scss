@@ -1,34 +1,22 @@
 .book_container {
-	background-image: image-url("green-2.png");
-  	background-repeat: repeat;
-  	display: table;
-
-}
-
-.small_book_container {
-	background-image: image-url("green-2.png");
-  	background-repeat: repeat;
+	background-color: #eee;
+	height: 100%;
+	position: relative;
+	top: 50px;
 }
 
 .inner_book_container {
-width: 70%;
-margin: 0 auto;
-height: 100%;
-background-color: #fff;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #fff;
 
 }
 
-
-#header_container {
-	width: 100%;
-	height: 6.5%;
-}
-
-div#body_container {
+.body-container {
 	border-top: 1px solid #eee;
 	background-color: #fff;
 	width: 100%;
-	height: 82%;
+
 }
 
 
@@ -42,7 +30,7 @@ div#body_container {
 ul {
 	-webkit-padding-start: 0px;
 }
-div#account_dropdown ul li {
+#account_dropdown ul li {
 	color: #333;
 	padding: 8%;
 	border: 1px solid #aaa;
@@ -54,7 +42,7 @@ div#account_dropdown ul li {
 
 
 
-div#account_dropdown ul li:hover{
+#account_dropdown ul li:hover{
 
 	background-color: #efefef;
 	cursor: pointer;
@@ -65,7 +53,7 @@ li a{
 	color: #333;
 }
 
-div#postbutton{
+#postbutton{
 	position: relative;
 	display: inline-block;
 	margin-top: 1.5%;
@@ -84,7 +72,7 @@ div#postbutton{
 	}
 }
 
-div#postbutton:hover{
+#postbutton:hover{
 	cursor: pointer;
 	opacity: 0.9;
 }
@@ -93,7 +81,7 @@ input#book_thumbnail {
 	border-width: 0px;
 }
 
-div#book_table_container {
+#book_table_container {
 	position: relative;
 	top: 1.5%;
 	height: 97%;
@@ -101,31 +89,27 @@ div#book_table_container {
 	background-color: #fff;
 }
 
-div#bookcontainer {
+#bookcontainer {
 	padding: 2%;
 	width: 96%;
-	height: 15%;
 	background-color: #eee;
 	border-top: 2px solid #fff;
-    display: table;
-    position: relative;
 }
 
-div#book_photo {
+#book_photo {
 	float: left;
 	width: 13.5%;
 	display: inline-block;
 }
 
-div#book_photo img {
+#book_photo img {
 	max-width: 100%;
 }
 
-div#book_info {
+#book_info {
 	float: right;
 	width: 83%;
-	height: 80%;
-	display: inherit;
+	height: 100%;
 }
 
 div#book_title {
@@ -135,21 +119,17 @@ div#book_title {
 	height: 35%;
 	display: inline-block;
 	font-family: Helvetica, sans-serif;
-	position: relative;
-	
 }
 
-div#book_desc {
+#book_desc {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #555;
 	line-height: 1.5;
 	font-size: 1.1em;
-    position: relative;
-    top: 7%;
+	display: inline-block;
 	width: 90%;
 	height: 65%;
 	text-align: justify;
-	overflow: hidden;
 }
 
 table#book_table {
@@ -163,9 +143,10 @@ a#viewbutton {
 	padding: 1% 2%;
 	background-color: #428bca;
 	border-radius: 2px;
-	left: 82%;
-	top: 100%;
 	text-decoration: none;
+	position: relative;
+	right: 0px;
+	bottom: 0px;
 }
 
 a#viewbutton:hover{
@@ -178,9 +159,6 @@ span#requestbutton {
 	padding: 1% 2%;
 	background-color: #5cb85c;
 	border-radius: 2px;
-	
-	left: 82%;
-	top: 100%;
 }
 
 span#requestbutton:hover {
@@ -188,13 +166,13 @@ span#requestbutton:hover {
 	cursor: pointer;
 }
 
-div#book_info_show {
+#book_info_view {
 	float: right;
 	width: 66%;
 	height: 100%;
 }
 
-div#book_title_show {
+#book_title_view {
 	font-size: 2em;
 	color: #444;
 	width: 100%;
@@ -202,7 +180,7 @@ div#book_title_show {
 	display: inline-block;
 }
 
-div#book_desc_show {
+#book_desc_view {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #555;
 	line-height: 1.5;
@@ -212,20 +190,19 @@ div#book_desc_show {
 	height: 58%;
 }
 
-div#book_photo_show {
+#book_photo_view {
 	float: left;
 	width: 30%;
 	display: inline-block;
 }
 
-div#book_photo_show img {
+#book_photo_view img {
 	max-width: 100%;
 }
 
-div#bookcontainer_show {
+#bookcontainer_view {
 	width: 95%;
 	margin: 0 auto;
-	height: 60%;
 	padding: 10% 0;
 }
 
@@ -240,7 +217,7 @@ a#add_book_button {
 }
 
 a#add_book_button:hover {
-opacity: 0.9;
+	opacity: 0.9;
 }
 
 a#back_button {
@@ -260,9 +237,11 @@ a#back_button:hover {
 #view-request-container {
 	width: 100%;
 	height: 20%;
-	position: absolute;
-	top: 80%;
-	left: 80%;
+	position: relative;
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
 }
 
 #menu-bar {
@@ -286,8 +265,8 @@ a#back_button:hover {
 }
 
 select#category {
- 	outline: none;
- 	width: 10%;
+	outline: none;
+	width: 10%;
 	padding: 1% 2%;
 	border-radius: 2px;
 	border: 1px solid #aaa;
@@ -344,4 +323,3 @@ a#small-bb-logo img{
 	position: relative;
 	left: 2.5%;
 }
-
