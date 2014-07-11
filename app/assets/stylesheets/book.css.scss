@@ -164,13 +164,13 @@ span#requestbutton:hover {
 	cursor: pointer;
 }
 
-div#book_info_show {
+div#book_info_view {
 	float: right;
 	width: 66%;
 	height: 100%;
 }
 
-div#book_title_show {
+div#book_title_view {
 	font-size: 2em;
 	color: #444;
 	width: 100%;
@@ -178,7 +178,7 @@ div#book_title_show {
 	display: inline-block;
 }
 
-div#book_desc_show {
+div#book_desc_view {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #555;
 	line-height: 1.5;
@@ -188,20 +188,19 @@ div#book_desc_show {
 	height: 58%;
 }
 
-div#book_photo_show {
+div#book_photo_view {
 	float: left;
 	width: 30%;
 	display: inline-block;
 }
 
-div#book_photo_show img {
+div#book_photo_view img {
 	max-width: 100%;
 }
 
-div#bookcontainer_show {
+div#bookcontainer_view {
 	width: 95%;
 	margin: 0 auto;
-	height: 60%;
 	padding: 10% 0;
 }
 

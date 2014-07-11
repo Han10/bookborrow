@@ -1,67 +1,30 @@
-<div class="small_book_container">
+
+<div class="book_container">
 	<div class="inner_book_container">
+		<%= render 'book/search_bar_header' %>
+		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "Account Info", "#" %></div>
+			<div class="book-account-title">Account Information</div>
 
-	<div id="account_title">
-		Account Information
+				<%= form_for @user, url: {controller: "static_pages", action: "update"} do |f| %>
+
+				
+				<%= f.label :first_name, "First Name", class: "post-book-label" %><br>
+		    	<%= f.text_field :first_name, class: "new-book-title-faculty" %><br><br>
+				<%= f.label :last_name, "Last Name", class: "post-book-label" %><br>
+				<%= f.text_field :last_name, class: "new-book-title-faculty" %><br><br>
+		   		<%= f.label :email, "Email", class: "post-book-label" %><br>
+				<%= f.text_field :email, class: "new-book-title-faculty" %><br><br>
+		   		<%= f.label :pass, "Password", class: "post-book-label" %><br>
+				<%= f.password_field :pass, class: "new-book-title-faculty" %><br><br>
+		   		<%= f.label :password_confirmation, "Password Confirmation", class: "post-book-label" %><br>
+
+				<%= f.password_field :password_confirmation, class: "new-book-title-faculty" %><br><br>
+				<%= f.submit "Edit"%> <%= button_tag "Back",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
+
+				<% end %>
+
+		</div>
 	</div>
-
-	<%= form_for @user, url: {controller: "static_pages", action: "update"} do |f| %>
-
-	<table>
-	<tr>
-	    <td>
-	    	<%= f.label :first_name, "First Name" %>
-	    </td>
-	    <td>
-	    	<%= f.text_field :first_name %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	   		<%= f.label :last_name, "Last Name" %>
-	    </td>
-	    <td>
-			<%= f.text_field :last_name %>
-		</td>
-	  </div>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :email, "Email" %>
-	    </td>
-	    <td>
-	    	<%= f.email_field :email %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :pass, "Password" %> 
-	    </td>
-	    <td>
-	    	<%= f.password_field :pass, placeholder: "New Password" %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :password_confirmation, "Confirm Password" %>
-	    </td>
-	    <td>
-	    	<%= f.password_field :password_confirmation, placeholder: "Re-Enter Password" %>
-	    </td>
-	</tr>
-	<tr>
-	    <td>
-	    	<%= f.label :gender, "Gender" %>
-	    </td>
-	    <td>
-	    	<%= f.radio_button :gender, "Male"%>Male
-	    	<%= f.radio_button :gender, "Female"%>Female
-	    </td>
-	</tr>
-</table>
-<div id="updatebutton">
-<%= f.submit "Edit"%>
-</div>
-<% end %>
-	</div>
+	
 </div>

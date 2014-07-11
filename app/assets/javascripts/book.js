@@ -6,6 +6,10 @@ var book_email = null;
 
 $('.header-container').css({ 'height' : 0.4* $(window).height() });
 $('.bookcontainer').css({ 'height' : 0.3* $(window).height() });
+$('.body-container').css({ 'min-height' : 0.6* $(window).height() });
+
+$('#bookcontainer_view').css({ 'height' : 0.5* $(window).height() });
+$('#view-request').css({ 'height' : 0.1* $(window).height() });
 
 
 $('div#outter_modal').css({ 'height' :  $(window).height() });
