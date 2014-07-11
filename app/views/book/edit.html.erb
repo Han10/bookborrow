@@ -1,6 +1,47 @@
-<div class="small_book_container">
+<div class="book_container">
 	<div class="inner_book_container">
+		<%= render 'search_bar_header' %>
+		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "My Books", "#" %></div>
+			<div class="book-account-title">My Books</div>
 
-		edit
+			<table>
+			<tr>
+				<td>
+					List of your books:
+				</td>
+			</tr>
+			<% @books.each do |book| %>
+				<tr>
+					<td>
+						<%= book.title %>
+					</td>
+					<td>
+						<%= link_to "View", view_path(book)%>
+					</td>
+				</tr>
+			<% end %>
+			</table>
+			<br>
+			<table>
+			<tr>
+				<td>
+					List of your requested books:
+				</td>
+			</tr>
+			<% @books.each do |book| %>
+				<tr>
+					<td>
+						<%= book.title %>
+					</td>
+					<td>
+						<%= link_to "View", view_path(book)%>
+					</td>
+				</tr>
+			<% end %>
+			</table>
+
+		</div>
 	</div>
+	
 </div>

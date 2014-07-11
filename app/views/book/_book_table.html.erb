@@ -1,7 +1,6 @@
 <div id="book_table_container">
-
 	<% @books.each do |book| %>
-	<div id="bookcontainer">
+	<div class="bookcontainer">
 		<div id="book_photo">
 			<%= image_tag book.thumbnail.url %>
 		</div>
@@ -11,19 +10,20 @@
 			</div>
 			<div id="book_desc">
 			    <%= book.desc %>
+				
+				<div id="view-request-container">
+				<%= link_to "View", view_path(book), id: "viewbutton" %>
+				<span id="requestbutton" data-book-title="<%= book.title_min %>" data-book-id="<%= book.id %>" 
+					data-user-id="<%= @user.id %>" data-book-email="<%= book.email %>" data-last-name="<%= book.last_name %>" 
+					data-user-email="<%= @user.email %>"> Request </span>
 			</div>
-			<div id="view-request-container">
-			<%= link_to "View", view_path(book), id: "viewbutton" %>
-			<span id="requestbutton" data-book-title="<%= book.title_min %>" data-book-id="<%= book.id %>" 
-				data-user-id="<%= @user.id %>" data-book-email="<%= book.email %>" data-last-name="<%= book.last_name %>" 
-				data-user-email="<%= @user.email %>"> Request </span>
 			</div>
 		</div>
 	</div>
 	<% end %>
 
  <% unless @books.blank? %>
- <%= will_paginate @books, :page_links => false %>
+	 <%= will_paginate @books, :page_links => false %>
  <% end %>
 
 </div>

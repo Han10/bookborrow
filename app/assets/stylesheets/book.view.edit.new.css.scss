@@ -1,0 +1,57 @@
+.body-container form {
+	padding-left: 7%;
+	padding-bottom: 3%;
+}
+
+.post-book-label {
+	font-size: 1em;
+	font-family: Helvetica, sans-serif;
+	letter-spacing: 1px;
+	color: #555;
+}
+
+.new-book-title-faculty {
+	width: 30%;
+	font-size: 1em;
+	color: #555;
+	outline: none;
+	border-radius: 2px;
+	padding: 1% 1%;
+	border: 1px solid #999;
+}
+
+.book-account-title{
+	padding: 2% 0;
+	font-size: 3em;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	color: #777;
+}
+
+textarea#book_description {
+	border: 1px solid #999;
+	border-radius: 2px;
+	font-size: 1.3em;
+	padding: 3px;
+	color: #555;
+	outline: none;
+}
+
+select#book_faculty {
+	padding: 1%;
+	font-size: 1em;
+	width: 20%;
+}
+
+.bread-crumbs {
+	padding-top: 1%;
+	padding-left: 1%;
+}
+
+.bread-crumbs a {
+	color: #555;
+	font-family: Helvetica, sans-serif; 
+	&:hover{
+		color: #5bc0de;
+	}
+}

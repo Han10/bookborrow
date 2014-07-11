@@ -1,0 +1,39 @@
+<div class="header-container">
+		<%= link_to image_tag("black-bookborrow-log.png"), book_index_path,  id: "small-bb-logo" %> 
+
+			<div id="account_dropdown">
+				<ul>
+					<div id="topdropdown">
+					<li>
+						<%= @user.first_name %> <%= @user.last_name %> <%= image_tag "tri.png", size:"10x6", class: "tri" %> 
+					</li>
+					</div>
+						<div id="dropdown">
+						<li>
+							<%= link_to "Account Info", account_path(@user) %>
+						</li>
+						<li>
+							<%= link_to "My Posts", edit_book_path(@user) %>
+						</li>
+						<li>
+							<%= link_to "Logout", root_path %>
+						</li>
+						</div>
+				</ul>
+			</div>
+		
+		<div id="search_bar">
+			<%= form_tag book_index_path, :method => :get do %>
+				<%= select_tag :category, options_for_select(array_of_faculties)%>
+			    <%= text_field_tag :search, params[:search], placeholder: "" %>
+			    <%= submit_tag "Search", name: nil, class: "submit_button" %>
+			<% end %>
+		</div>
+		<div id="menu-bar">
+			Home | Law | Arts | Science | Engineering | Business | Social Science | Medicine
+		</div>
+		<div id="number-book-results"></div>
+			<div id="postbutton">
+				<%= link_to "Post", new_book_path %>
+			</div>
+</div>

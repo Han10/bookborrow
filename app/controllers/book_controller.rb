@@ -1,15 +1,17 @@
 class BookController < ApplicationController
 
   before_action :deny_access_if_not_logged_in
+  before_action :set_user
 
-  def index
-    @user ||= User.find_by email: session[:current_user_email]
-    
-    @books = Book.search do
+  def index    
+
+     @books = Book.search do
       fulltext params[:search]
       paginate page: params[:page], per_page: 5
     end.results
 
+    @books_cou = @books.count
+    
     respond_to do |format|
       format.html
       format.json 
@@ -19,12 +21,10 @@ class BookController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    @user = User.find_by email: session[:current_user_email]
   end
 
   def view
     @book = Book.find(params[:id])
-    @user = User.find_by email: session[:current_user_email]
   end
 
   def requestmodal
@@ -50,11 +50,10 @@ class BookController < ApplicationController
   end
 
   def create
-    user = User.find_by email: session[:current_user_email]
 
     @book = Book.new(book_params)
-    @book.email = user.email
-    @book.user_id = user.id
+    @book.email = @user.email
+    @book.user_id = @user.id
     
     if @book.save
       Book.reindex
@@ -66,7 +65,7 @@ class BookController < ApplicationController
   end
 
   def edit
-    @book = Book.all
+    @books = Book.all
   end
 
   def update
@@ -89,14 +88,22 @@ class BookController < ApplicationController
   private
 
     def book_params
-      params.require(:book).permit(:title, :description, :thumbnail, :email)
+      params.require(:book).permit(:title, :description, :thumbnail, :email, :faculty)
     end
 
     def deny_access_if_not_logged_in
-
       if session[:current_user_email] == nil
         redirect_to root_path
       end
     end
+
+    def set_user
+      begin
+        @user = User.find_by email: session[:current_user_email]
+      rescue
+        redirect_to root_path
+      end
+    end
+
 end
 

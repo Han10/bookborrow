@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+$('body').css({ 'min-height' : $(window).height() });
 $('body > .home-container').css({ 'height' : 0.93*$(window).height() });
 $('body > .home-container').css({ 'width' : $(window).width() });
 

@@ -11,14 +11,6 @@ body {
 .home-container {
 }
 
-div#account_title{
-	padding: 5% 0;
-	font-size: 3em;
-	font-family: Helvetica, sans-serif;
-	text-align: center;
-	color: #333;
-}
-
 .home_page_text {
 font-family: Helvetica, sans-serif;
 text-align: center;
@@ -51,29 +43,9 @@ select {
 	padding: 6% 5%;
 }
 
-
-div#updatebutton input {
-	position: relative;
-	margin: 2% auto ;
-	padding: 1% 12%;
-	font-size: 1em;
-	border-radius: 10px;
-	font-family: Helvetica, sans-serif;
-	background-color: #5cb85c;
-	color: #333;
-	border: 1px solid #333;
-	display: block;
-
-}
-
-div#updatebutton input:hover {
-	cursor: pointer;
-	opacity: 0.9;
-}
-
 a {
 	text-decoration: none;
-	color: #eee;
+	color: #777;
 }
 
 .pagination {
