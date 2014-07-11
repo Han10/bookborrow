@@ -1,4 +1,4 @@
-div#unsuccessful_login {
+div#unsuccessful_notice {
 	
 	padding: 1.5% 1%;
 	width: 70%;
@@ -10,10 +10,29 @@ div#unsuccessful_login {
 	border: 1px solid #a94442;;
 }
 
-span#close_unsuccessful_login {
+span#close_unsuccessful_notice {
 	float: right;
 	margin-right: 3%;
 	color: #a94442;
+	cursor: pointer;
+}
+
+div#successful_notice {
+	
+	padding: 1.5% 1%;
+	width: 70%;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-bottom: 2%;
+	color: #3c763d;
+	background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+}
+
+span#close_successful_notice {
+	float: right;
+	margin-right: 3%;
+	color: #3c763d;
 	cursor: pointer;
 }
 

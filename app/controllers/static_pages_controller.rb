@@ -33,7 +33,7 @@ def create
 	when @user.save
 		redirect_to book_index_path
 	else
-		flash[:unsuccessful_signup] = prefix << "Change a few things up and try submitting again."
+		flash[:unsuccessful_signup] = prefix << "change a few things up and try submitting again."
 		render :signup	
 	end
 	

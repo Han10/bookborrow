@@ -1,6 +1,4 @@
-<div class="book_container">
-	<div class="inner_book_container">
-		<div id="header_container">
+<div class="header-container">
 		<%= link_to image_tag("black-bookborrow-log.png"), book_index_path,  id: "small-bb-logo" %> 
 
 			<div id="account_dropdown">
@@ -15,7 +13,7 @@
 							<%= link_to "Account Info", account_path(@user) %>
 						</li>
 						<li>
-							<%= link_to "My Posts", "#" %>
+							<%= link_to "My Posts", my_posts_path %>
 						</li>
 						<li>
 							<%= link_to "Logout", root_path %>
@@ -23,12 +21,11 @@
 						</div>
 				</ul>
 			</div>
-		</div>
+		
 		<div id="search_bar">
 			<%= form_tag book_index_path, :method => :get do %>
-				<%= select_tag :category, options_for_select([['All', 'All'], ['Law', 'Law'],['Science', 'Science'],['Engineering', 'Engineering'], ['Business', 'Business'], ['Social Science', 'Social Science'], ['Medicine', 'Medicine']])
-								%>
-			    <%= text_field_tag :search, params[:search], placeholder: "search the book title or description..." %>
+				<%= select_tag :category, options_for_select(array_of_faculties)%>
+			    <%= text_field_tag :search, params[:search], placeholder: "" %>
 			    <%= submit_tag "Search", name: nil, class: "submit_button" %>
 			<% end %>
 		</div>
@@ -39,11 +36,4 @@
 			<div id="postbutton">
 				<%= link_to "Post", new_book_path %>
 			</div>
-		<div class="body-container">
-		<div id="bread-crumbs"> Home </div>
-
-			<%= render 'book_table' %>
-		</div>
-	</div>
-			<%= render 'requestmodal' %>
 </div>

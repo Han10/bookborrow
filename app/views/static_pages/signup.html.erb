@@ -4,9 +4,9 @@
 		<%= image_tag "bookborrow-logo.png", id: "bb-logo", alt: "Book Borrow Logo" %> 
 		  		 <!-- Error message: Unscuccessful login -->
 				     <% if flash[:unsuccessful_signup] %>
-				        <div id="unsuccessful_login">
+				        <div id="unsuccessful_notice">
 				            <%= flash[:unsuccessful_signup] %>
-				        <span id="close_unsuccessful_login">&times;</span>
+				        <span id="close_unsuccessful_notice">&times;</span>
 				        </div>
 				    <% end %>
 		<div id="signup-container">

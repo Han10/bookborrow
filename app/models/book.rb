@@ -1,6 +1,8 @@
 class Book < ActiveRecord::Base
 
-attr_accessible :title, :description, :thumbnail, :email
+attr_accessible :title, :description, :thumbnail, :email, :faculty
+
+validates :title, presence: true
 
 searchable do
 	text :title
@@ -56,6 +58,5 @@ def last_name
 
 end
 
-#change this
 
 end

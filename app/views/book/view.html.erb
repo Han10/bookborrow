@@ -1,36 +1,43 @@
-<div class="small_book_container">
+<div class="book_container">
 	<div class="inner_book_container">
+		<%= render 'book/search_bar_header' %>
+		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "Book Profile", "#" %></div>
 
+				<div id="bookcontainer_view">
+					<div id="book_photo_view">
+						<%= image_tag @book.thumbnail.url %>
+					</div>
+					<div id="book_info_view">
+						<div id="book_title_view">
+							<%= @book.title %><br/>
+							<small style="font-size: 0.55em; color: #777; font-family: Georgia;">
+							Posted by:<span style="color: #428bca;"><%= @user.last_name %><span></small> <br>
+							<small style="font-size: 0.55em; color: #777; font-family: Georgia; ">Date Posted: 
+							<span style="color: #428bca;"><%= @book.updated_at.strftime("%B, %d %Y") %><span></small>
+							
+						</div>
+						<div id="book_desc_view">
+							<strong style="line-height: 3;">Description:</strong> <br/>
+							&emsp;&emsp; <%= @book.description %>
+						</div>
+					</div>
+				</div>
+				<div id="view-request">
 
-	<div id="bookcontainer_show">
-		<div id="book_photo_show">
-			<%= image_tag @book.thumbnail.url %>
-		</div>
-		<div id="book_info_show">
-			<div id="book_title_show">
-				<%= @book.title %><br/>
-				<small style="font-size: 0.55em; color: #777; font-family: Georgia;">
-				Posted by:<span style="color: #428bca;"><%= @user.last_name %><span></small> <br>
-				<small style="font-size: 0.55em; color: #777; font-family: Georgia; ">Date Posted: 
-				<span style="color: #428bca;"><%= @book.updated_at.strftime("%B, %d %Y") %><span></small>
-				
-			</div>
-			<div id="book_desc_show">
-				<strong style="line-height: 3;">Description:</strong> <br/>
-				&emsp;&emsp; <%= @book.description %>
-			</div>
+					<%= link_to "Back", book_index_path, id: "back_button" %>
+
+					<div id="request_button" data-book-title="<%= @book.title_min %>" 
+					data-book-id="<%= @book.id %>" data-user-id="<%= @user.id %>"
+					data-book-email="<%= @book.email %>" data-last-name="<%= @book.last_name %>" 
+					data-user-email="<%= @user.email %>"> Request
+					 </div>
+
+				</div>
 		</div>
 	</div>
-		<div>
-
-
-		<%= link_to "Back", book_index_path, id: "back_button" %>
-
-		<div id="request_button" data-book-title="<%= @book.title_min %>" data-book-id="<%= @book.id %>" data-user-id="<%= @user.id %>"
-		data-book-email="<%= @book.email %>" data-last-name="<%= @book.last_name %>" data-user-email="<%= @user.email %>"> Request </div>
-
-		</div>
-	</div>
-</div>
 		<%= render 'requestmodal' %>
+		
+</div>
+
 
