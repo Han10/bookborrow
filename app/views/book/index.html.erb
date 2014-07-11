@@ -2,6 +2,8 @@
 	<div class="inner_book_container">
 		<%= render 'search_bar_header' %>
 		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> /</div>
+			<div style="padding: 10px;"></div>
 			<%= render 'book_table' %>
 		</div>
 	</div>

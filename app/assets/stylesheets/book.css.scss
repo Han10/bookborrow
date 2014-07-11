@@ -4,9 +4,9 @@
 }
 
 .inner_book_container {
-width: 70%;
-margin: 0 auto;
-background-color: #fff;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #fff;
 
 }
 
@@ -28,7 +28,7 @@ background-color: #fff;
 ul {
 	-webkit-padding-start: 0px;
 }
-div#account_dropdown ul li {
+#account_dropdown ul li {
 	color: #333;
 	padding: 8%;
 	border: 1px solid #aaa;
@@ -40,7 +40,7 @@ div#account_dropdown ul li {
 
 
 
-div#account_dropdown ul li:hover{
+#account_dropdown ul li:hover{
 
 	background-color: #efefef;
 	cursor: pointer;
@@ -51,7 +51,7 @@ li a{
 	color: #333;
 }
 
-div#postbutton{
+#postbutton{
 	position: relative;
 	display: inline-block;
 	margin-top: 1.5%;
@@ -70,7 +70,7 @@ div#postbutton{
 	}
 }
 
-div#postbutton:hover{
+#postbutton:hover{
 	cursor: pointer;
 	opacity: 0.9;
 }
@@ -79,7 +79,7 @@ input#book_thumbnail {
 	border-width: 0px;
 }
 
-div#book_table_container {
+#book_table_container {
 	position: relative;
 	top: 1.5%;
 	height: 97%;
@@ -87,24 +87,24 @@ div#book_table_container {
 	background-color: #fff;
 }
 
-div#bookcontainer {
+#bookcontainer {
 	padding: 2%;
 	width: 96%;
 	background-color: #eee;
 	border-top: 2px solid #fff;
 }
 
-div#book_photo {
+#book_photo {
 	float: left;
 	width: 13.5%;
 	display: inline-block;
 }
 
-div#book_photo img {
+#book_photo img {
 	max-width: 100%;
 }
 
-div#book_info {
+#book_info {
 	float: right;
 	width: 83%;
 	height: 100%;
@@ -119,7 +119,7 @@ div#book_title {
 	font-family: Helvetica, sans-serif;
 }
 
-div#book_desc {
+#book_desc {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #555;
 	line-height: 1.5;
@@ -164,13 +164,13 @@ span#requestbutton:hover {
 	cursor: pointer;
 }
 
-div#book_info_view {
+#book_info_view {
 	float: right;
 	width: 66%;
 	height: 100%;
 }
 
-div#book_title_view {
+#book_title_view {
 	font-size: 2em;
 	color: #444;
 	width: 100%;
@@ -178,7 +178,7 @@ div#book_title_view {
 	display: inline-block;
 }
 
-div#book_desc_view {
+#book_desc_view {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #555;
 	line-height: 1.5;
@@ -188,17 +188,17 @@ div#book_desc_view {
 	height: 58%;
 }
 
-div#book_photo_view {
+#book_photo_view {
 	float: left;
 	width: 30%;
 	display: inline-block;
 }
 
-div#book_photo_view img {
+#book_photo_view img {
 	max-width: 100%;
 }
 
-div#bookcontainer_view {
+#bookcontainer_view {
 	width: 95%;
 	margin: 0 auto;
 	padding: 10% 0;
@@ -215,7 +215,7 @@ a#add_book_button {
 }
 
 a#add_book_button:hover {
-opacity: 0.9;
+	opacity: 0.9;
 }
 
 a#back_button {
@@ -263,8 +263,8 @@ a#back_button:hover {
 }
 
 select#category {
- 	outline: none;
- 	width: 10%;
+	outline: none;
+	width: 10%;
 	padding: 1% 2%;
 	border-radius: 2px;
 	border: 1px solid #aaa;
