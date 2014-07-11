@@ -43,8 +43,12 @@ $('span.next_page.disabled').html("Next");
 
 //Notices Javascript
 
-	$('span#close_unsuccessful_login').click( function(){
-		$('div#unsuccessful_login').hide();
+	$('span#close_unsuccessful_notice').click( function(){
+		$('div#unsuccessful_notice').hide();
+	});
+
+	$('span#close_successful_notice').click( function(){
+		$('div#successful_notice').hide();
 	});
 
 //Signup Javascript

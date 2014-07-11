@@ -59,6 +59,5 @@ def last_name
 
 end
 
-#change this
 
 end

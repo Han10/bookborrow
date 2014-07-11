@@ -15,7 +15,7 @@
 				<%= f.text_area :description, rows: 10, cols: 40 %><br><br>
 		    	<%= f.label :thumbnail, "Upload Photo", class: "post-book-label" %><br>
 		    	<%= f.file_field :thumbnail %><br><br>
-				<%= f.submit "Save"%> <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
+				<%= f.submit "Post" %> <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
 
 				<% end %>
 

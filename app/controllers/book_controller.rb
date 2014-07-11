@@ -64,8 +64,12 @@ class BookController < ApplicationController
     end
   end
 
+  def my_posts
+    @books = Book.where user_id: @user.id
+  end
+
   def edit
-    @books = Book.all
+    @book = Book.find(params[:id])
   end
 
   def update
@@ -75,14 +79,23 @@ class BookController < ApplicationController
       Book.reindex
       redirect_to @book
     else
-      # DO SOMETHING ELSE
+      redirect_to @book
     end
   end
 
   def destroy
-    @book = Book.find(params[:id])
-    @book.destroy
-    redirect_to books_path
+    
+    @books = Book.where user_id: @user.id
+    begin
+        @book = Book.find!(params[:id])
+        book_title = @book.title
+        @book.destroy
+        flash.now[:successful_deletion] = "Successfully deleted " << book_title << "."
+        render :my_posts
+    rescue
+        flash.now[:unsuccessful_deletion] = "The book has been deleted or never existed"
+        render :my_posts
+    end
   end
 
   private

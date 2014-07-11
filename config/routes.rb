@@ -11,6 +11,7 @@ Bookborrow::Application.routes.draw do
   get '/account/:id' => "static_pages#account_info", as: "account"
   patch '/account/:id' => "static_pages#update"
   get '/view/:id' => "book#view", as: "view"
+  get '/myposts' => "book#my_posts", as: "my_posts"
   post '/requestmodal' => "book#requestmodal", as: "requestmodal"
 
   

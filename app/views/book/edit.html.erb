@@ -2,44 +2,22 @@
 	<div class="inner_book_container">
 		<%= render 'search_bar_header' %>
 		<div class="body-container">
-			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "My Books", "#" %></div>
-			<div class="book-account-title">My Books</div>
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "Edit Book Profile", "#" %></div>
+			<div class="book-account-title">Edit Book Profile</div>
 
-			<table>
-			<tr>
-				<td>
-					List of your books:
-				</td>
-			</tr>
-			<% @books.each do |book| %>
-				<tr>
-					<td>
-						<%= book.title %>
-					</td>
-					<td>
-						<%= link_to "View", view_path(book)%>
-					</td>
-				</tr>
-			<% end %>
-			</table>
-			<br>
-			<table>
-			<tr>
-				<td>
-					List of your requested books:
-				</td>
-			</tr>
-			<% @books.each do |book| %>
-				<tr>
-					<td>
-						<%= book.title %>
-					</td>
-					<td>
-						<%= link_to "View", view_path(book)%>
-					</td>
-				</tr>
-			<% end %>
-			</table>
+				<%= form_for @book, url: {controller: "book", action: "update"} do |f| %>
+				
+				<%= f.label :title, "Title", class: "post-book-label" %><br>
+		    	<%= f.text_field :title, class: "new-book-title-faculty" %><br><br>
+				<%= f.label :faculty, "Faculty", class: "post-book-label" %><br>
+				<%= f.select :faculty, options_for_select(array_of_faculties.drop(0).insert(0, ['',''])) %><br><br>
+		   		<%= f.label :description, "Description", class: "post-book-label" %><br>
+				<%= f.text_area :description, rows: 10, cols: 40 %><br><br>
+		    	<%= f.label :thumbnail, "Upload Photo", class: "post-book-label" %><br>
+		    	<%= f.file_field :thumbnail %><br><br>
+				<%= f.submit "Save" %> <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
+
+				<% end %>
 
 		</div>
 	</div>
