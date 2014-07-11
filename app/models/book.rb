@@ -34,9 +34,8 @@ def desc
 #		desc_min = self.description
 #	end 
     if self.description.length>250
-    	return self.description[0.. 250]+'...'
-else
-
+    	return self.description[0.. 700]+'...'
+    else
 	return self.description[ 0.. 250]
 end
 

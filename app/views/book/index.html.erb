@@ -28,7 +28,7 @@
 			<%= form_tag book_index_path, :method => :get do %>
 				<%= select_tag :category, options_for_select([['All', 'All'], ['Law', 'Law'],['Science', 'Science'],['Engineering', 'Engineering'], ['Business', 'Business'], ['Social Science', 'Social Science'], ['Medicine', 'Medicine']])
 								%>
-			    <%= text_field_tag :search, params[:search], placeholder: "" %>
+			    <%= text_field_tag :search, params[:search], placeholder: "search the book title or description..." %>
 			    <%= submit_tag "Search", name: nil, class: "submit_button" %>
 			<% end %>
 		</div>
