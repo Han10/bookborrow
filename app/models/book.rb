@@ -36,9 +36,14 @@ def desc
 #		desc_min = self.description
 #	end 
     if self.description.length>250
+<<<<<<< HEAD
     	return self.description[0.. 250]+'...'
 else
 
+=======
+    	return self.description[0.. 700]+'...'
+    else
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 	return self.description[ 0.. 250]
 end
 

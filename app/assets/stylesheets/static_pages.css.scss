@@ -1,14 +1,25 @@
 
 body {
+<<<<<<< HEAD
+=======
+	background-image: image-url("girl.png");
+	-webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
   	margin: 0px;
 }
 
 .home-container {
+<<<<<<< HEAD
 	background-image: image-url("girl.png");
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+=======
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 }
 
 .home_page_text {
@@ -56,7 +67,11 @@ a {
 
 a.next_page, span.previous_page.disabled,
  	a.previous_page, span.next_page.disabled {
+<<<<<<< HEAD
  		color: #333;
+=======
+ 		color: #333; 
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
  		padding: 5% 4%;
  		width: 40%;
  		font-size: 1.3em;
@@ -85,6 +100,7 @@ input.login_field {
 
 .submit-button {
 	-webkit-appearance: button;
+<<<<<<< HEAD
 }
 
 
@@ -93,3 +109,6 @@ nav.navbar.navbar-default {
 	margin-bottom: 0px;
 	border-radius: 0px;
 }
+=======
+}
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65

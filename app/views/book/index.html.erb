@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= render 'search_bar_header' %>
 <div class="book_container">
 	<div class="inner_book_container">
@@ -30,4 +31,17 @@
 			
 		</div>
 	</div>
+=======
+		<%= render 'search_bar_header' %>
+
+<div class="book_container">
+	<div class="inner_book_container">
+		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> /</div>
+			<div style="padding: 10px;"></div>
+			<%= render 'book_table' %>
+		</div>
+	</div>
+	<%= render 'requestmodal' %>
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 </div>

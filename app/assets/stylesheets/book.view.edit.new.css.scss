@@ -43,6 +43,7 @@ select#book_faculty {
 	width: 20%;
 }
 
+<<<<<<< HEAD
 #book_info_view {
 	float: right;
 	width: 66%;
@@ -119,4 +120,17 @@ a#back_button:hover {
 	top: 0px;
 	left: 0px;
 	right: 0px;
+=======
+.bread-crumbs {
+	padding-top: 1%;
+	padding-left: 1%;
+}
+
+.bread-crumbs a {
+	color: #555;
+	font-family: Helvetica, sans-serif; 
+	&:hover{
+		color: #5bc0de;
+	}
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 }

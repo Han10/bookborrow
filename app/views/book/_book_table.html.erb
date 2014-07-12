@@ -1,6 +1,12 @@
 <div id="book_table_container">
+<<<<<<< HEAD
 	<% @books.each do |book| %>
 	<div class="bookcontainer">
+=======
+
+	<% @books.each do |book| %>
+	<div id="bookcontainer">
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 		<div id="book_photo">
 			<%= image_tag book.thumbnail.url %>
 		</div>
@@ -10,6 +16,7 @@
 			</div>
 			<div id="book_desc">
 			    <%= book.desc %>
+<<<<<<< HEAD
 				
 				<div id="view-request-container">
 				<%= link_to "View", view_path(book), id: "viewbutton" %>
@@ -17,13 +24,26 @@
 					data-user-id="<%= @user.id %>" data-book-email="<%= book.email %>" data-last-name="<%= book.last_name %>" 
 					data-user-email="<%= @user.email %>"> Request </span>
 			</div>
+=======
+			</div>
+			<div id="view-request-container">
+			    <%= link_to "View", view_path(book), id: "viewbutton" %>
+			    <span id="requestbutton" data-book-title="<%= book.title_min %>" data-book-id="<%= book.id %>" 
+				data-user-id="<%= @user.id %>" data-book-email="<%= book.email %>" data-last-name="<%= book.last_name %>" 
+				data-user-email="<%= @user.email %>"> Request </span>
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 			</div>
 		</div>
 	</div>
 	<% end %>
 
+<<<<<<< HEAD
 <% unless @books.blank? %>
 	 <%= will_paginate @books, :page_links => false %>
+=======
+ <% unless @books.blank? %>
+ <%= will_paginate @books, :page_links => false %>
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
  <% end %>
 
 </div>

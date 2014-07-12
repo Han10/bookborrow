@@ -4,9 +4,14 @@ var book_id = null;
 var user_id = null;
 var book_email = null;
 
+<<<<<<< HEAD
 $('.header-container').css({ 'height' : 0.2* $(window).height() });
 $('.bookcontainer').css({ 'height' : 0.3* $(window).height() });
 $('.body-container').css({ 'min-height' : $(window).height() });
+=======
+$('.bookcontainer').css({ 'height' : 0.3* $(window).height() });
+$('.body-container').css({ 'min-height' : 0.8* $(window).height() });
+>>>>>>> ad3cef06b324c9b7a257c3a1e3de6c34d8f5aa65
 
 $('#bookcontainer_view').css({ 'height' : 0.5* $(window).height() });
 $('#view-request').css({ 'height' : 0.1* $(window).height() });
