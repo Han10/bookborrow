@@ -1,0 +1,122 @@
+.body-container form {
+	padding-left: 7%;
+	padding-bottom: 3%;
+}
+
+.post-book-label {
+	font-size: 1em;
+	font-family: Helvetica, sans-serif;
+	letter-spacing: 1px;
+	color: #555;
+}
+
+.new-book-title-faculty {
+	width: 30%;
+	font-size: 1em;
+	color: #555;
+	outline: none;
+	border-radius: 2px;
+	padding: 1% 1%;
+	border: 1px solid #999;
+}
+
+.book-account-title{
+	padding: 2% 0;
+	font-size: 3em;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	color: #777;
+}
+
+textarea#book_description {
+	border: 1px solid #999;
+	border-radius: 2px;
+	font-size: 1.3em;
+	padding: 3px;
+	color: #555;
+	outline: none;
+}
+
+select#book_faculty {
+	padding: 1%;
+	font-size: 1em;
+	width: 20%;
+}
+
+#book_info_view {
+	float: right;
+	width: 66%;
+	height: 100%;
+}
+
+#book_title_view {
+	font-size: 2em;
+	color: #444;
+	width: 100%;
+	height: 30%;
+	display: inline-block;
+}
+
+#book_desc_view {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #555;
+	line-height: 1.5;
+	font-size: 1.1em;
+	display: inline-block;
+	width: 100%;
+	height: 58%;
+}
+
+#book_photo_view {
+	float: left;
+	width: 30%;
+	display: inline-block;
+}
+
+#book_photo_view img {
+	max-width: 100%;
+}
+
+#bookcontainer_view {
+	width: 95%;
+	margin: 0 auto;
+	padding: 10% 0;
+}
+
+a#add_book_button {
+	float: right;
+	text-decoration: none;
+	padding : 1.5% 2%;
+	background-color:  #428bca;
+	border-radius: 3px;
+	color: #fff;
+	margin-right: 1%;
+}
+
+a#add_book_button:hover {
+	opacity: 0.9;
+}
+
+a#back_button {
+	float: right;
+	text-decoration: none;
+	padding : 1.5% 2%;
+	border: 1px solid #333;
+	border-radius: 3px;
+	color: #333;
+	margin-right: 2%;
+}
+
+a#back_button:hover {
+	background-color: #ddd;
+}
+
+#view-request-container {
+	width: 100%;
+	height: 20%;
+	position: relative;
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}

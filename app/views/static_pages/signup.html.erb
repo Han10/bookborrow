@@ -1,0 +1,32 @@
+<div class="home-container">
+	<div class="home_page_text">
+
+		<%= image_tag "bookborrow-logo.png", id: "bb-logo", alt: "Book Borrow Logo" %> 
+		  		 <!-- Error message: Unscuccessful login -->
+				     <% if flash[:unsuccessful_signup] %>
+				        <div id="unsuccessful_notice">
+				            <%= flash[:unsuccessful_signup] %>
+				        <span id="close_unsuccessful_notice">&times;</span>
+				        </div>
+				    <% end %>
+		<div id="signup-container">
+		<div id="signup-title" >Sign Up</div>
+			<%= form_for @user, url: {controller: "static_pages", action: "create"}, html: {autocomplete: "off"} do |f| %>
+
+				<%= f.text_field :first_name, placeholder: "First Name", class: "login_field", id: "signup-first-name" %>
+				<%= f.text_field :last_name, placeholder: "Last Name", class: "login_field", id: "signup-last-name" %>
+				<%= f.email_field :email, placeholder: "Your Email Address", class: "login_field", id: "signup-email" %>
+				<%= f.password_field :pass, placeholder: "New Password", class: "login_field", id: "signup-pass" %>
+				<%= f.password_field :password_confirmation, placeholder: "Re-Enter Password", class: "login_field", id: "signup-pass-conf" %>
+				
+				<div style="padding: 2%;"></div>
+			
+				<%= f.submit "Create", class: "createbutton", id: "createbutton" %>
+				<%= link_to "Cancel", root_path ,id: "cancel-button" %>
+			
+			<% end %>
+		</div>
+		</div>
+
+	</div>
+</div>

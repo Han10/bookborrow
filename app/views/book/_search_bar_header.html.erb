@@ -1,0 +1,43 @@
+<div class="header_container">
+	<div class="nav_container">
+		<%= link_to image_tag("black-bookborrow-log.png"), book_index_path,  id: "small-bb-logo" %>
+		<ul id="nav_menu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Categories</a>
+				<ul>
+					<li><a href="#">Law</a></li>
+					<li><a href="#">Arts</a></li>
+					<li><a href="#">Science</a></li>
+					<li><a href="#">Engineering</a></li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#"></a>Social Science</li>
+					<li><a href="#"></a>Medicien</li>
+				</ul>
+			</li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li id="postbutton">
+				<%= link_to "Post", new_book_path %>
+			</li>
+			<li id="account_dropdown">
+				<a href="#">
+					<%= @user.first_name %> <%= @user.last_name %>
+				</a>
+				<ul>
+					<li><%= link_to "Account Info", account_path(@user) %></li>
+					<li><%= link_to "My Posts", my_posts_path %></li>
+					<li><%= link_to "Logout", root_path %></li>
+				</ul>
+			</li>
+		</ul>
+
+		<%= form_tag book_index_path, :method => :get , id:"search_bar" do %>
+		<%= select_tag :category, options_for_select(array_of_faculties), onMouseOver:"this.style.width='100px'" , 
+		onMouseLeave:"this.style.width='50px'",
+		onblur:"this.style.width='50px'", onChange:"this.style.width  =  '50px'" ,style:"width:50px"%>
+		<%= text_field_tag :search, params[:search], placeholder: "" %>
+		<%= submit_tag "Search", name: nil, class: "submit_button" %>
+		<% end %>
+
+
+</div>

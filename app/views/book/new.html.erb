@@ -1,0 +1,26 @@
+<div class="book_container">
+	<div class="inner_book_container">
+		<%= render 'search_bar_header' %>
+		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "Post Book", "#" %></div>
+			<div class="book-account-title">Post Book</div>
+
+				<%= form_for @book, url: {controller: "book", action: "create"} do |f| %>
+				
+				<%= f.label :title, "Title", class: "post-book-label" %><br>
+		    	<%= f.text_field :title, class: "new-book-title-faculty" %><br><br>
+				<%= f.label :faculty, "Faculty", class: "post-book-label" %><br>
+				<%= f.select :faculty, options_for_select(array_of_faculties.drop(0).insert(0, ['',''])) %><br><br>
+		   		<%= f.label :description, "Description", class: "post-book-label" %><br>
+				<%= f.text_area :description, rows: 10, cols: 40 %><br><br>
+		    	<%= f.label :thumbnail, "Upload Photo", class: "post-book-label" %><br>
+		    	<%= f.file_field :thumbnail %><br><br>
+				<%= f.submit "Post", class: 'submit-button' %> <%= button_tag "Cancel",:type => 'button',
+							 :onclick => "location.href = '#{book_index_path()}'"  %>
+
+				<% end %>
+
+		</div>
+	</div>
+	
+</div>

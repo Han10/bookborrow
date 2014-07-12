@@ -1,0 +1,30 @@
+
+<div class="book_container">
+	<div class="inner_book_container">
+		<%= render 'book/search_bar_header' %>
+		<div class="body-container">
+			<div class="bread-crumbs"> <%= link_to "Home", book_index_path %> / <%= link_to "Account Info", "#" %></div>
+			<div class="book-account-title">Account Information</div>
+
+				<%= form_for @user, url: {controller: "static_pages", action: "update"} do |f| %>
+
+				
+				<%= f.label :first_name, "First Name", class: "post-book-label" %><br>
+		    	<%= f.text_field :first_name, class: "new-book-title-faculty" %><br><br>
+				<%= f.label :last_name, "Last Name", class: "post-book-label" %><br>
+				<%= f.text_field :last_name, class: "new-book-title-faculty" %><br><br>
+		   		<%= f.label :email, "Email", class: "post-book-label" %><br>
+				<%= f.text_field :email, class: "new-book-title-faculty" %><br><br>
+		   		<%= f.label :pass, "Password", class: "post-book-label" %><br>
+				<%= f.password_field :pass, class: "new-book-title-faculty" %><br><br>
+		   		<%= f.label :password_confirmation, "Password Confirmation", class: "post-book-label" %><br>
+
+				<%= f.password_field :password_confirmation, class: "new-book-title-faculty" %><br><br>
+				<%= f.submit "Edit"%> <%= button_tag "Back",:type => 'button', :onclick => "location.href = '#{book_index_path()}'"  %>
+
+				<% end %>
+
+		</div>
+	</div>
+	
+</div>

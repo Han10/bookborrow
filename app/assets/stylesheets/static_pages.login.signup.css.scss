@@ -1,0 +1,93 @@
+/* All CSS corresponding to the signup page */
+
+a#signup-link {
+	width: 40%;
+	margin: 0px;
+	display: block;
+	position: relative;
+	margin-top: 1%;
+	margin-bottom: 1.5%;
+	left: 3.5%;
+	color: #5bc0de;
+	font-size: 0.80em;
+	text-align: left;
+}
+
+a#signup-link:hover{
+	opacity: 0.8;
+}
+
+form#new_user.new_user {
+	margin-bottom: 6%;
+}
+
+#signup-container {
+	color: #fff;
+	background-color: rgba(51,51,51,0.9);
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 2%;
+	width: 48%;
+	font-size: 1.2em;
+	font-family: Helvetica, sans-serif;
+	border: 1px solid #333;
+}
+
+.login-container {
+	color: #fff;
+	border: 1px solid #333;
+	background-color: rgba(51,51,51,0.9);
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 4%;
+	width: 48%;
+	font-size: 1.2em;
+	font-family: Helvetica, sans-serif;
+}
+
+#login {
+	margin: 8% 0px 3%;
+}
+
+#signup-title {
+	color: #fff;
+	font-size: 2.5em;
+	padding-bottom: 3%;
+	padding-top: 2%;
+	font-family: Helvetica, sans-serif;
+}
+
+#cancel-button {
+	background-color: #d9534f;
+	padding: 2.5% 6%;
+	border-radius: 5px;
+	font-family: Helvetica, sans-serif;
+	color: #eee;
+	border: 1px solid #333;
+	text-align: center;
+	outline:none;
+}
+
+#cancel-button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.createbutton {
+	margin: 0px;
+	padding: 2.5% 6%;
+	width: 45%;
+	font-size: 1em;
+	border-radius: 5px;
+	font-family: Helvetica,  Helvetica, sans-serif;	background-color: #5cb85c;
+	color: #eee;
+	border: 1px solid #333;
+	text-align: center;
+	outline:none;
+}
+
+.createbutton:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+

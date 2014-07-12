@@ -1,0 +1,142 @@
+
+#request_button {
+	float: right;
+	text-decoration: none;
+	padding : 1.5% 2%;
+	background-color:  #5cb85c;
+	border-radius: 3px;
+	color: #fff;
+	margin-right: 1%;
+}
+
+#request_button:hover {
+opacity: 0.9;
+cursor: pointer;
+}
+
+div#modal {
+	border: 1px solid black;
+	height: 60%;
+	width: 25%;
+	left: 50%;
+	margin-left: -12.5%;
+	position: fixed;
+	top: 20%;
+	background-color: #fff;
+	border-radius: 2%;
+	opacity: 1;
+}
+
+div#outter_modal {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+div#modal_header_container {
+	height: 10%;
+	width: 100%;
+	border-bottom: 2px solid #ddd;
+}
+
+span#close {
+	float: right;
+	padding: 1% 2%;
+	font-family: sans-serif;
+	color: #777;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+div#modal_header {
+	float: left;
+	height: 100%;
+	width: auto;
+	vertical-align: middle;
+	font-family: Georgia, serif;
+	color: #888;
+	display: inline-block;
+	text-align: center;
+	padding-left: 2%;
+
+}
+
+em {
+	color:#5cb85c;
+}
+
+div#modal_body_container {
+	letter-spacing: 1px;
+	font-size: 1em;
+	line-height: 80%;
+	color: #666;
+	font-family: Georgia, serif;
+	margin: 2% 0;
+	margin-left: 3%;
+}
+
+strong {
+	letter-spacing: normal;
+}
+
+input, textarea {
+}
+
+div#modal_message_container {
+	margin-left: 3%;
+	color: #666;
+	font-family: Georgia, serif;
+	font-weight: bold;
+}
+
+textarea#modal_message{
+margin: 2% auto;
+border-radius: 2%;
+width: 92%;
+padding: 2%;
+resize: none;
+font-family: helvetica, verdana, tahoma;
+color:#333;
+}
+
+div#modal_send_button {
+	display: inline-block;
+	padding: 5% 1%;
+	background-color: #5cb85c;
+	color: #333;
+	font-size: 1.1em;
+	border-radius: 3px;
+	text-align: center;
+	color:#fff;
+}
+
+div#modal_send_button:hover{
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+div#modal_cancel_button {
+	width: 45%;
+	border: 1px solid #555;
+	display: inline-block;
+	padding: 5% 1%;
+	color: #333;
+	font-size: 1.1em;
+	border-radius: 3px;
+	text-align: center;
+}
+
+div#modal_cancel_button:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+div#send_cancel_container {
+	width: 55%;
+	margin: 4% auto;
+	height: 12%;
+}
